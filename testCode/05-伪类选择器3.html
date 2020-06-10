@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div p:first-child {
+            background: honeydew;
+        }
+
+        /* of-type  选择类型 */
+        div span:first-of-type {
+            background: blue;
+        }
+
+        div span:nth-of-type(2) {
+            background: red;
+        }
+
+        div span:last-of-type {
+            background: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>我是一个p标签</p>
+        <span>span1</span>
+        <span>span2</span>
+        <span>span3</span>
+    </div>
+</body>
+
+</html>

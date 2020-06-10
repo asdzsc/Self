@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>020-使用::selection改变文本选择颜色.html</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	html{
+		/*filter: grayscale(100%);*/
+	}
+	::-moz-selection {
+		background-color: #66f;
+		color: #fff;
+	}
+
+	::selection {
+		background-color: #66f;
+		color: #fff;
+	}
+
+	.select-color {
+		line-height: 50px;
+		font-weight: bold;
+		font-size: 30px;
+		color: #f66;
+	}
+
+	.special::-moz-selection {
+		background-color: #3c9;
+	}
+
+	.special::selection {
+		background-color: #3c9;
+	}
+
+	</style>
+</head>
+<body>
+	<div class="select-color">
+		<p>全局选择文字颜色</p>
+		<p>全局选择文字颜色</p>
+		<p class="special">局部选择文字颜色</p>
+	</div>
+</body>
+</html>

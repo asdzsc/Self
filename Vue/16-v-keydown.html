@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>16-v-keydown.html</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+
+		<input type="text" @keydown.13="enter()">1
+		<br>
+		<input type="text" @keydown.enter="enter()">2
+		<br>
+
+		
+		<input type="text" @keydown.a="key($event)">3
+		<br>
+		<input type="text" @keydown.65="key($event)">4
+		<br>
+
+		<!-- 组合键 -->
+		<input type="text" @keydown.alt.65="key($event)">5
+		<br>
+		<input type="text" @keydown.alt.a="key($event)">6
+	</div>
+</body>
+<script>
+	const vm = new Vue({
+		el:"#app",
+		data:{
+			curTime:1573459913,
+		},
+		methods:{
+			enter(){
+				console.log('enter....')
+			},
+			key(e){
+				console.log(e)
+				console.log('key....')
+			}
+		}
+	})
+</script>
+</html>

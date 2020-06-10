@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var arr = [11, 22, 33, 44, 55, 66, 77, 88, 99]
+        var newArray = []
+
+        //方法一
+        // var j = 0
+        // for (var i = 0; i < arr.length; i++) {
+        //     if (arr[i] > 20) {
+        //         //新数组索引从0开始 依次递增
+        //         newArray[j] = arr[i]
+        //         j++
+        //     }
+        // }
+        // console.log(newArray);
+
+        //方法二
+        //刚开始newArray.length就是0
+        for (var i = 0; i < arr.length; i++) {
+            if (arr[i] > 20) {
+                //新数组索引从0开始 依次递增
+                newArray[newArray.length] = arr[i]
+            }
+        }
+        console.log(newArray);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

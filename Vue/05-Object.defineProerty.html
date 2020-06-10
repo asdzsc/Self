@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>05-Object.defineProerty.html</title>
+</head>
+<body>
+	
+</body>
+<script>
+	const data = {
+		obj:{
+			a:1,
+			b:10
+		}
+	}
+	let value = data.obj
+	Object.defineProperty(data,'obj',{
+		get(){
+			return 'xxx'
+		},
+		set(newVal){
+			value = newVal 
+			console.log('赋值')
+			
+		}
+	})	
+	data.obj = 90
+	console.log(data.obj)
+</script>
+</html>

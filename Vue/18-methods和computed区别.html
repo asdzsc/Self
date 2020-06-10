@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        span {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <span>1---{{ addName() }}</span>
+        <span>2---{{ addName() }}</span>
+        <span>3---{{ changeName }}</span>
+        <span>4---{{ changeName }}</span>
+        <span>5---{{ time }}</span>
+        <span>6---{{ num }}</span>
+    </div>
+</body>
+<script>
+    const vm = new Vue({
+        el: "#app",
+        data: {
+            name: "shanshan",
+            num: 1
+        },
+        methods: {//方法，没有缓存
+            addName: function () {
+                console.log('addName 被调用');
+                return 'hello' + this.name
+            }
+        },
+        computed: {//计算，带缓存的，在数据的基础上进行依赖
+            changeName: {
+                get: function () {
+                    console.log('changeName 被调用');
+                    return 'hello' + this.name;
+                },
+                set: function () {
+                    this.name = name
+                }
+            },
+            time: function () {
+                console.log('time 被调用');
+                return new Date()
+            },
+        },
+        watch: {//检测，数据改变进行的操作，异步操作
+            name: function () {
+                console.log('检测到name发生改变');
+                this.num++
+            }
+        }
+    })
+</script>
+
+</html>

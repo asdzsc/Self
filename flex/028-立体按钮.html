@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>028-立体按钮.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.stereo-btn {
+			margin: 30px;
+			padding: 10px 20px;
+			outline: none;
+			border: none;
+			border-radius: 10px;
+			background-image: linear-gradient(#09f, #3c9);
+			box-shadow: 0 10px 0 #09f;
+			cursor: pointer;
+			text-shadow: 0 5px 5px #ccc;
+			font-size: 20px;
+			color: #fff;
+			transition: all 300ms;
+		}
+		.stereo-btn:active {
+			box-shadow: 0 5px 0 #09f;
+			-webkit-transform: translate3d(0, 5px, 0);
+			transform: translate3d(0, 5px, 0);
+		}
+	</style>	
+</head>
+<body>
+	<button class="stereo-btn">立即申请</button>
+</body>
+</html>

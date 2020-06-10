@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>025-打字效果.html</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.auto-typing {
+			font-weight: bold;
+			font-size: 30px;
+			color: #09f;
+			overflow: hidden;
+			border-right: 1px solid transparent;
+			width: 53ch;
+			font-family: Consolas, Monaco, Monospace;
+			white-space: nowrap;
+			/* steps就是让动画分几步完成 一个字一步 就不需要 linear ease 或者其他动画速度了  */
+			-webkit-animation: typing 5s steps(53) 0s backwards, caret 500ms steps(1) 0s 10 forwards;
+			animation: typing 5s steps(53) 0s backwards, caret 500ms steps(1) 0s 10 forwards;
+		}
+
+		@-webkit-keyframes typing {
+			from {
+				width: 0;
+			}
+		}
+
+		@keyframes typing {
+			from {
+				width: 0;
+			}
+		}
+
+		@-webkit-keyframes caret {
+			50% {
+				border-right-color: currentColor;
+			}
+		}
+
+		@keyframes caret {
+			50% {
+				border-right-color: currentColor;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="auto-typing">Do You Want To Know More About CSS Development Skill</div>
+</body>
+
+</html>

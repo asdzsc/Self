@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>15-v-filter.html</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		{{ 11 | addZero }}
+		<br>
+		{{ 3.141592 | number(2) }}
+		<br>
+		{{ curTime | date }}
+	</div>
+</body>
+<script>
+	//全局指令
+	Vue.filter("addZero",function(num){
+		return num < 10 ? '0'+num : num;
+	})
+	const vm = new Vue({
+		el:"#app",
+		data:{
+			curTime:1573459913,
+		},
+		//局部指令
+		filters:{
+			// 数字保留几位小数
+			number(num,n=2){
+				return num.toFixed(n)
+			},
+			date(data){
+				let now = new Date(data * 1000)
+				return now.getFullYear() + '-'  + now.getMonth() + '-' + now.getDate()
+			}
+		}
+	})
+</script>
+</html>

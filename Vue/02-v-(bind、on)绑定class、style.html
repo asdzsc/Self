@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>02-v-(bind、on)绑定class、style.html</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.red {
+			background: red;
+		}
+
+		.yellow {
+			background: yellow;
+		}
+
+		.green {
+			background: green;
+		}
+
+		.width {
+			width: 200px;
+			border: 1px solid #000;
+			padding: 10px;
+		}
+
+		.color1 {
+			color: #000;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- vue指令 -->
+	<!-- 1.v-bind 绑定属性  { v-bind <=> : }-->
+	<!--   class []  ｛｝ 用数组绑定多个属性 用布尔值判断是否添加 -->
+	<!--   style {} [] -->
+
+	<!-- 2.v-on:xxx -->
+
+	<!-- 3.$event  vue默认的事件对象 -->
+	<div id="app">
+		<!-- <img :src=imgUrl alt="vue" :style="[{width:imgWidth},imgStyle]" style="width: 100px;"> -->
+		<!-- <h4 :class = "[h4Class,h4Width]">{{ name }}</h4> -->
+		<!-- <h4 :class = "{red:true}">{{ name }}</h4> -->
+		<!-- <h4 :class = "[h4Flag && 'red',h4Width]">{{ name }}</h4> -->
+		<button @click="handleClick($event,2)">切换</button>
+		<h4 :class="h4ClassArr[h4Index]">{{ name }}</h4>
+
+	</div>
+</body>
+<script>
+	const vm = new Vue({
+		el: "#app",
+		data: {
+			name: "vue",
+			imgUrl: "https://cn.vuejs.org/images/logo.png",
+			h4Class: "red",
+			h4Width: "width",
+			h4Flag: true,
+			imgWidth: "200px",
+			imgStyle: {
+				border: "10px solid red"
+			},
+			h4ClassArr: ['red', 'yellow', 'green'],
+			h4Index: 0,
+			h4Count: 0
+		},
+		methods: {
+			handleClick(e, num) {
+				//this == vm
+				console.log(e, num)
+				this.h4Index = ++this.h4Count % 3;
+			}
+		}
+	})
+</script>
+
+</html>

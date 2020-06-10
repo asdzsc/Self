@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>05-轮播图.html</title>
+<link rel="stylesheet" href="css/certify.css">  
+<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">  
+<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">    
+</head>
+<body>
+	<div id="certify">
+		<div class="swiper-container swiper-container2">
+			<div class="swiper-wrapper">
+			<div class="swiper-slide"><img src="../img/01.png" /></div>
+			<div class="swiper-slide"><img src="../img/02.png" /></div>
+			<div class="swiper-slide"><img src="../img/03.png" /></div>
+			<div class="swiper-slide"><img src="../img/04.png" /></div>
+			<div class="swiper-slide"><img src="../img/05.png" /></div>
+			</div>
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+</body>
+<!-- Swiper JS -->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/swiper-3.4.0.jquery.min.js"> </script>  
+<script src="js/swiper.myanimate1.0.0.min.js"> </script>  
+
+<script>
+	certifySwiper = new Swiper('#certify .swiper-container2', {
+		watchSlidesProgress: true,
+		slidesPerView: 'auto',
+		centeredSlides: true,
+		loop: true,
+		loopedSlides: 5,
+		autoplay: 3000,
+		pagination: '.swiper-pagination',
+		onProgress: function(swiper, progress) {
+			for (i = 0; i < swiper.slides.length; i++) {
+				var slide = swiper.slides.eq(i);
+				var slideProgress = swiper.slides[i].progress;
+				modify = 1;
+				if (Math.abs(slideProgress) > 1) {
+					modify = (Math.abs(slideProgress) - 1) * 0.3 + 1;
+				}
+				translate = slideProgress * modify * 100 + 'px';
+				scale = 1 - Math.abs(slideProgress) / 5;
+				zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
+				slide.transform('translateX(' + translate + ') scale(' + scale + ')');
+				slide.css('zIndex', zIndex);
+				slide.css('opacity', 1);
+				if (Math.abs(slideProgress) > 3) {
+					slide.css('opacity', 1);
+				}
+			}
+		},
+		onSetTransition: function(swiper, transition) {
+			for (var i = 0; i < swiper.slides.length; i++) {
+				var slide = swiper.slides.eq(i)
+				slide.transition(transition);
+			}
+
+		},
+		onSlideChangeStart: function(swiper) {
+			if (swiper.activeIndex == 4) {
+				swiper.bullets.eq(9).addClass('swiper-pagination-bullet-active');
+				console.log(swiper.bullets.length);
+			}
+		}
+	});
+</script>
+</html>

@@ -1,0 +1,140 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<title>自动获取天气插件</title>
+		<meta charset="utf-8">
+		<script src="http://www.jq22.com/jquery/1.8.3/jquery.min.js"></script>
+		<script src="jquery.leoweather.all.js"></script>
+	</head>
+	
+	<body>
+		<style type="text/css">
+			.skin1 {
+				font-size:20px; 
+			}
+			.skin1 img {
+				height:20px;
+				vertical-align:middle;
+			}
+			
+			.skin2 {
+				display:inline-block;
+				border:1px solid #DDDDDD;
+			}
+			.skin2 .top {
+				font-size:14px;
+				overflow:hidden;
+				border-bottom:1px solid #DDDDDD;
+				padding:20px;
+				text-align:center;
+			}
+			.skin2 .mid {
+				overflow:hidden;
+				border-bottom:1px solid #DDDDDD;
+				padding:20px;
+			}
+			.skin2 .mid .fl {
+				float:left;
+				background:#6495ED;
+				padding:20px;
+			}
+			.skin2 .mid .fl img {
+				height:80px;
+			}
+			.skin2 .mid .fr {
+				float:right;
+				padding:20px;
+			}
+			.skin2 .mid .fr h2 {
+				font-size:20px;
+				line-height:28px;
+				margin:0;
+			}
+			.skin2 .mid .fr p {
+				font-size:20px;
+				line-height:28px;
+				margin:0;
+			}
+			.skin2 .bot {
+				font-size:16px;
+				padding:20px;
+			}
+			.skin2 .bot ul {
+				display:inline-block;
+				margin:0;
+				padding:0;
+				list-style:none;
+			}
+			.skin2 .bot li {
+				border-top:1px dashed #DDDDDD;
+				padding-top:10px;
+				margin-top:10px;
+			}
+			.skin2 .bot li:first-child {
+				border-top:0;
+				padding-top:0;
+				margin-top:0;
+			}
+			.skin2 .bot li * {
+				display:inline-block;
+				vertical-align:top;
+			}
+			.skin2 .bot li em {
+				font-style:normal;
+				width: 100px;
+			}
+			.skin2 .bot li span {
+				font-style:normal;
+				width:117px;
+			}
+			.skin2 .bot li strong {
+				font-style:normal;
+				width:117px;
+			}
+		</style>
+		<br>
+<br>
+<br>
+请 <a href="https://www.tianqiapi.com/user/login.php" target="_blank">点击这里</a> 免费申请，每日免费使用3万次。<br>
+<br>
+<br>
+
+		<div class="welcome-info">
+			<div class="skin1"><b>默认样式：</b><span id="weather0"></span></div>
+			<div><b>美化样式：</b><br>
+				<div class="skin2" id="weather1"></div>
+			</div>
+		</div>
+		<script type="text/javascript">
+
+			
+	//	插件说明
+	//	时间：	{时段}{年}{月}{日}{时}{分}{秒}{周}
+	//	天气： {城市}{天气}{气温}{风向}{风级}{图标}{最高气温}{最低气温}{}{}{}{}{}{}{}
+	//	图标：	自己去选取样式网址，https://www.tianqiapi.com/diy.php?style=ya
+			
+
+			
+			$('#weather0').leoweather({appid:'86986721',appsecret:'eXm5G85Y',city:'北京'});
+			$('#weather1').leoweather({appid:'86986721',appsecret:'eXm5G85Y',
+				format: '<div class="top">' +
+							'{时段}好！现在是：{年}/{月}/{日} {时}:{分}:{秒} 星期{周}' +
+						'</div>' +
+						'<div class="mid">' +
+							'<div class="fl"><img src="https://xuesax.com/tianqiapi/skin/cake/{图标}.png" /></div>' +
+							'<div class="fr"><h2>{城市} {天气}</h2><p>{最低气温}~{最高气温}</p><p>{风向}{风级}</p></div>' +
+						'</div>' +
+						'<div class="bot">' +
+							'<ul>' +
+								'<li><strong>{人性化日期+1}</strong><span>{天气+1}</span><em>{最低气温+1}~{最高气温+1}</em></li>' +
+								'<li><strong>{人性化日期+2}</strong><span>{天气+2}</span><em>{最低气温+2}~{最高气温+2}</em></li>' +
+								'<li><strong>{人性化日期+3}</strong><span>{天气+3}</span><em>{最低气温+3}~{最高气温+3}</em></li>' +
+								'<li><strong>{人性化日期+4}</strong><span>{天气+4}</span><em>{最低气温+4}~{最高气温+4}</em></li>' +
+								'<li><strong>{人性化日期+5}</strong><span>{天气+5}</span><em>{最低气温+5}~{最高气温+5}</em></li>' +
+								'<li><strong>{人性化日期+6}</strong><span>{天气+6}</span><em>{最低气温+6}~{最高气温+6}</em></li>' +
+							'</ul>' +
+						'</div>'
+			});
+		</script>
+	</body>
+</html>

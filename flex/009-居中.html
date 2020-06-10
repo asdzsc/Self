@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>020-居中.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.father{
+			width: 600px;
+			height: 600px;
+			border: 1px solid #000;
+			margin: 50px auto;
+			display: flex;
+			/*flex-direction: row;*/
+			/*flex-direction: column;*/
+			justify-content: center;
+			align-items: center;
+		}
+		.son{
+			width: 100px;
+			height: 100px;
+			background: red;	
+			border: 1px solid #000;
+			box-sizing: border-box;
+			
+			/*align-items: center;*/
+			
+		}
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="son">son1</div>
+		<div class="son">son2</div>
+	</div>
+</body>
+</html>

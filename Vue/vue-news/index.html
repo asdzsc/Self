@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>vue新闻客户端</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<style>
+		.scroll-container{
+			width: 90%;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<div class="scroll-container">
+			<div style="border: 1px solid #eee">
+			<div v-for="value in data" style="padding: 10px;">
+				<h3>{{ value.title }}</h3>
+				<p>{{ value.body }}</p>
+				<img :src="value.img">
+			</div>
+			</div>
+		</div>
+		<div style="text-align: center;font-size: 3em;">
+			<div>
+				loading...
+			</div>
+		</div>
+	</div>
+</body>
+<script src="js/new.js"></script>
+</html>

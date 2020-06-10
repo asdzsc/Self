@@ -1,0 +1,17 @@
+.error, .seriousError {
+  border: 1px solid red;
+  background-color: #fdd; }
+
+.seriousError {
+  border-width: 3px;
+  margin: 20px 0; }
+
+.error a, .seriousError a {
+  color: red;
+  font-weight: 100;
+  text-decoration: none; }
+
+h1.error, h1.seriousError {
+  font-size: 1.2rem; }
+
+/*# sourceMappingURL=extend.css.map */

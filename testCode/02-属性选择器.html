@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        button {
+            color: #000;
+            cursor: pointer;
+        }
+
+        /*1. 直接写属性 */
+        button[disabled] {
+            color: pink;
+        }
+
+        /*2. 属性等于值 */
+        input[type="search"] {
+            border: 5px solid green;
+        }
+
+        /*3.以某个值开始的 属性值 */
+        .box div[class^="icon"] {
+            width: 50px;
+            height: 50px;
+            background: #000;
+            margin-top: 10px;
+        }
+
+        /*4.以某个值结尾的 属性值 */
+        .box div[class$="Icon"] {
+            width: 60px;
+            height: 60px;
+            background: #f40;
+            margin-top: 10px;
+        }
+
+        /*5.可以在任意位置 属性值 */
+        .box div[class*="Icon"] {
+            width: 60px;
+            height: 60px;
+            background: rgb(236, 15, 218);
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <button>button1</button>
+        <button disabled="disabled">button2</button>
+        <button disabled="disabled">button3</button>
+        用户名： <input type="text" placeholder="请输入用户名">
+        密码： <input type="text" placeholder="请输入密码">
+        <input type="text" value="文本">
+        <input type="search" value="搜索">
+        <input type="search" value="搜索">
+        <div class="icon1">icon1</div>
+        <div class="icon2">icon2</div>
+        <div class="icon3">icon3</div>
+        <div class="tabIcon">icon</div>
+        <div class="tabIcon">icon</div>
+        <div class="Icon">icon</div>
+        <div class="Icon">icon</div>
+    </div>
+</body>
+
+</html>

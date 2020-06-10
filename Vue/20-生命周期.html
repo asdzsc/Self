@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <p>{{ msg }}</p>
+    </div>
+</body>
+<script>
+    const vm = new Vue({
+        el: "#app",
+        data: {
+            msg: "hello"
+        },
+        //创建前
+        beforeCreate() {
+            console.log('创建前')
+            console.log('beforeCreate')
+            console.log('this.message::', this.message)
+            console.log('this.$el::', this.$el)
+            console.log('this.$refs.p::', this.$refs.p)
+        },
+        //创建后
+        created() {
+            console.log('创建后')
+            console.log('created')
+            console.log('this.message::', this.message)
+            console.log('this.$el::', this.$el)
+            console.log('this.$refs.p::', this.$refs.p)
+        },
+        //挂载前
+        beforeMount() {
+            console.log('挂载前')
+            console.log('beforeMount')
+            console.log('this.message::', this.message)
+            console.log('this.$el::', this.$el)
+            console.log('this.$refs.p::', this.$refs.p)
+        },
+        //挂载后
+        mounted() {
+            console.log('挂载后')
+            console.log('mounted')
+            console.log('this.message::', this.message)
+            console.log('this.$el::', this.$el)
+            console.log('this.$refs.p::', this.$refs.p)
+        },
+        //更新前
+        beforeUpdate() {
+            console.log('更新前')
+            console.log('beforeUpdate')
+            console.log('this.message::', this.message)
+            console.log('this.$el::', this.$el)
+            console.log('this.$refs.p::', this.$refs.p)
+        },
+        //更新后
+        updated() {
+            console.log('更新后')
+            console.log('updated')
+            console.log('this.message::', this.message)
+            console.log('this.$el::', this.$el)
+            console.log('this.$refs.p::', this.$refs.p)
+        },
+        //销毁前
+        beforeDestroy() {
+            console.log('销毁前')
+            console.log('beforeDestroy')
+            console.log('this.message::', this.message)
+            console.log('this.$el::', this.$el)
+            console.log('this.$refs.p::', this.$refs.p)
+        },
+        //销毁后
+        destroyed() {
+            console.log('销毁后')
+            console.log('destroyed')
+            console.log('this.message::', this.message)
+            console.log('this.$el::', this.$el)
+            console.log('this.$refs.p::', this.$refs.p)
+        }
+    })
+</script>
+
+</html>

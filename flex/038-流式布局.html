@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>038-流式布局.html038-流式布局.html</title>
+</head>
+<style>
+ /* css代码如下 */
+.father {
+      height: 300px;
+      border: 3px solid #000;
+       /* 让盒子变为弹性盒子 */
+      display: flex;
+    }
+
+    /* 左侧固定 */
+    .left {
+      width: 300px;
+      height: 300px;
+      flex: 2;
+      background-color: blue;
+    }
+
+    /* 右侧自适应 */
+    .right {
+      /* width: 不需要设置  默认自适应 */
+      flex: 1;
+      height: 300px;
+      background-color: yellow;
+    }
+/* 甚至子元素的高度也不用设置,默认拉伸显示 */
+</style>
+<body>
+	<div class="father">
+	    <div class="left"></div>
+	    <div class="right"></div>
+	</div>
+</body>
+</html>

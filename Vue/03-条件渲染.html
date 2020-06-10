@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>03-条件渲染.html</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 200px;
+			height: 200px;
+		}
+		.red{
+			background: red;
+		}
+		.blue{
+			background: blue;
+		}
+		.green{
+			background: green;
+		}
+	</style>
+</head>
+<body>
+	<!-- v-if 能够控制元素的显示和隐藏 -->
+	<!-- v-else-if -->
+	<!-- v-else -->
+
+	<!-- v-show 能够控制元素的显示和隐藏 -->
+
+	<!-- 区别 -->
+	<!-- 1.v-if 控制dom的移除/添加.v-show控制dom的样式显示与隐藏{display} -->
+	<!--   频繁的切换显示/隐藏的时候用v-show-->
+	<!--   只判断一次时，使用v-if -->
+	<!-- 2.v-if可以写在template上，v-show 写上不生效-->
+	<div id="app">
+		<button @click="handleClick">{{ txt }}</button>
+		<!-- <div class="box red" v-if="num == 0"></div> -->
+		<!-- <div class="box green" v-else-if="num == 1"></div> -->
+		<!-- 中间不可在加任何标签 -->
+		<!-- <div class="box blue" v-else></div> -->
+
+<!-- 		<template v-if="show">
+			<div class="box red"></div>
+			<div class="box green"></div>
+		</template> -->
+	
+		<div class="box red" v-show="show"></div>
+		<div class="box green" v-if="show"></div>
+	</div>
+</body>
+<script>
+	const vm = new Vue({
+		el:"#app",
+		data:{
+			show:true,
+			txt:"隐藏",
+			num:0
+		},
+		methods:{
+			handleClick(){
+				this.show = !this.show
+				this.txt = this.show ? '隐藏' : '显示' 
+			}
+		}
+	})
+</script>
+</html>

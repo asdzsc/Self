@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>019-使用max-height切换自动高度.html</title>
+</head>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.auto-height {
+		width: 800px;
+	}
+	.auto-height li {
+		width: 150px;
+		text-align: center;
+		float: left;
+		margin-left: 10px;
+		list-style: none;
+		cursor: pointer;
+	}
+	.auto-height li:hover p {
+		border-bottom-width: 1px;
+		max-height: 600px;
+	}
+	.auto-height h3 {
+		padding: 0 20px;
+		height: 40px;
+		background-color: #f66;
+		cursor: pointer;
+		line-height: 40px;
+		font-size: 20px;
+		color: #fff;
+	}
+	.auto-height p {
+		overflow: hidden;
+		padding: 0 20px;
+		border: 1px solid #f66;
+		border-top: none;
+		border-bottom-width: 0;
+		max-height: 0;
+		line-height: 30px;
+		transition: all 500ms;
+	}
+	.auto-height p  a{
+		color: #000;
+		display: inline-block;
+		font-size: 16px;
+		text-decoration: none;
+		padding-bottom: 5px;
+	}
+	.auto-height p  a:hover{
+		color: #f66;
+		font-weight: bold;
+		text-shadow: 0 0 7px #f66;
+	}
+</style>
+<body>
+	<ul class="auto-height">
+		<li>
+			<h3>关于我们</h3>
+			<p>
+				<a href="javascript:;" target="blank">关于我们</a><br>
+				<a href="javascript:;">工作环境</a><br>
+				<a href="javascript:;">员工活动</a><br>
+			</p>
+		</li>
+		<li>
+			<h3>投递简历</h3>
+			<p>
+				<a href="javascript:;" target="blank">部门简介</a><br>
+				<a href="javascript:;">招聘岗位</a><br>
+				<a href="javascript:;">宣讲行程</a><br>
+				<a href="javascript:;">校招行程</a>
+			</p>
+		</li>
+		<li>
+			<h3>福利与发展</h3>
+			<p>
+				<a href="javascript:;">薪酬福利</a><br>
+				<a href="javascript:;">培训发展</a><br>
+			</p>
+		</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>04-条件渲染数组的方法.html</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<!-- v-for -->
+	<!-- 1. 不能通过索引的方法更改数组，这样不会渲染 -->
+	<!-- 2. 不能通过更改长度的方法更改数组，这样不会渲染 -->
+	<!-- 3.数组变异方法：pop、shift、unshift、splice、sort、reverse、push -->
+	
+	<div id="app">
+<!-- 	<ul>
+			<li v-for='item in arr'>{{ item }}</li>
+		</ul> -->
+		{{ arr }}
+		<button @click="handleClick">click</button>
+	</div>
+</body> 
+<script>
+	const vm = new Vue({
+		el:"#app",
+		data:{
+			arr:['html','css','js'],
+		},
+		methods:{
+			handleClick(){
+				const length = this.arr.length
+				// this.arr[length] = 'react'
+				this.arr.push('react')
+			}
+		}
+	})
+</script>
+</html>

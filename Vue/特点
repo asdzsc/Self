@@ -1,0 +1,107 @@
+选择框架
+JavaScript
+
+框架特点：
+简洁 高效 易于维护
+
+vue jQuery 的区别
+jQuery 直接操作dom
+vue 数据驱动 程序只与数据打交道  不操作dom
+
+
+vue2 核心概念
+
+数据驱动  虚拟dom  组件 指令
+指令 对  html 元素html功能的扩展 <div v-xx></div>
+
+
+过滤器的使用
+
+组件----通信
+
+状态管理---vuex
+算法与数据结构
+
+
+数组
+把数组插入到数组的最前面  unshift()
+把数组插入到数组的最后面  push()
+删除某个值 pop() shift()
+	
+长度是否可变
+
+多维数组
+foreach filter reduce map
+
+指令对html的扩展
+
+.app <div class="app"></app>
+#app <div id="app"></app>
+jQuery dom addClass() removeClass()
+
+vue v-bind class 单个/多个
+
+
+闪烁
+{{xxxxx}}
+v-text 
+v-html
+
+v-model 
+mvvm mvc 
+mvc 设计模式
+model view 	controller 
+request---controller---method---业务处理---封装数据---model---跳转---view
+
+mvvm
+model---viewmodel---view  数据双向绑定
+
+tab 页面   
+
+阻止默认行为
+阻止事件传播
+
+a href="#" click=""  点击后--click--默认行为href
+e.preventDefault()
+
+
+事件传播2种 ie firefox
+
+div<div<body<html
+
+捕获阶段：从外向里依次查找元素(只有dom二级事件才支持捕获)
+目标阶段：从当前事件源本身的操作
+冒泡阶段：从内到外依次触发相关的行为（我们最常用的就是冒泡阶段，dom对象添加了相同的事件，像click等，才会有冒泡产生）
+
+由内到外
+e.stopPropagation()
+
+过滤器
+data---过滤管道---过滤管道---返回结果
+
+指令方式 最简洁复用
+
+component组件
+
+可以复用 简洁
+
+组件的关系
+
+嵌套关系 <table>---<tr>---<td>  <ul>---<li>
+组件插槽 slot
+
+动态组件
+创建 销毁 保存组件的状态
+
+vue 模块化
+import export
+export default 导出一个默认对象 对应的导入 import xx from xx
+export 导出一个对象  对应的导入 import { xx } from xx
+vue.use 使用一个公共全局的组件
+scoped  仅对当前的组件有效
+
+vue serve HelloWorld.vue 启动单个html
+npm install -g @vue/cli-service-global
+
+npm install -g serve 安装小的http服务器 启动打包后的页面
+serve -s dist/

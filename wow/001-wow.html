@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/animate.css">
+</head>
+<body>
+	<div class="wow">
+        Content to Reveal Here
+	</div>
+	<div class="wow bounceInUp">
+		Content to bounceInUp Here
+	</div>
+	<div class="wow swing">
+		Content to swing Here
+	</div>
+	<div class="wow rollIn">
+		Content to rollIn Here
+	</div>
+	<div class="wow lightSpeedIn">
+		Content to lightSpeedIn Here
+	</div>
+	<div class="wow bounceInRight">
+		Content to bounceInRight Here
+	</div>
+	<div class="wow swing">
+		Content to swing Here
+	</div>
+	<section class="wow slideInLeft" data-wow-duration="2s" data-wow-delay="5s">
+		Content to slideInLeft Here
+    </section>
+
+    <section class="wow slideInRight" data-wow-offset="1"  data-wow-iteration="1">
+    	Content to slideInRight Here
+    </section>
+</body>
+<script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>
+<script>
+	wow = new WOW(
+		{
+			boxClass:     'wow',      // default
+			animateClass: 'animated', // default
+			offset:       0,          // default
+			mobile:       true,       // default
+			live:         true        // default
+		}
+	)
+	wow.init();
+</script>
+</html>

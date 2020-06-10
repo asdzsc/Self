@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- 制作人信息 -->
+	<!--PM:[xxx] Designer:[xxx] Developer:[] date:2019年05月31号-->
+	<title>【***2017校园招聘】***前程无忧官方校园招聘网</title>
+	<meta content="***校园招聘 前程无忧官方网站，提供最新***校园招聘职位，校园招聘信息，***面试技巧等。帮助您顺利踏入***的大门，与众多***精英们开启一段崭新的职业生涯。"
+		name="description">
+	<meta content="人才，招聘，简历，工作，求职，面试，应聘，跳槽，高薪，兼职，猎头，薪酬，薪资，培训，测评，人事" name="keywords">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=1440">
+	<link rel="stylesheet" type="text/css" href="css/reset.min.css" />
+
+	<style type="text/css">
+		body {
+			overflow: auto;
+			width: 100%;
+			height: 100%;
+		}
+
+		.index {
+			width: 100%;
+			height: 100%;
+			position: relative;
+		}
+
+		.index .index-bg {
+			display: block;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		.index .index-enter {
+			display: block;
+			position: absolute;
+			left: 50%;
+			top: 51.5%;
+			transform: translate(-50%, 0);
+			width: 276px;
+			height: 64px;
+			cursor: pointer;
+			opacity: 0;
+			border-radius: 8px;
+		}
+	</style>
+	<script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+	<script>
+		$(function () {
+			var ua = navigator.userAgent;
+			var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
+			for (var i = 0; i < Agents.length; i++) {
+				if (ua.indexOf(Agents[i]) > 0) {
+					window.location.href = 'about.html';
+				}
+			}
+		})
+	</script>
+</head>
+
+<body>
+	<div class="index">
+		<embed class="index-bg" height="100%" width="100%" src="swf/zsj.swf" type="application/x-shockwave-flash">
+		<a class="index-enter" href="about.html"></a>
+	</div>
+
+</body>
+<script>
+	$(function () {
+		$('body').css('height', $(window).height());
+	});
+	$(document).ready(function () {
+		var wdh = window.screen.width; //浏览器当前窗口可视区域宽度
+		if (wdh < 750) {
+			window.location.href = "about.html";
+		}
+	})
+</script>
+
+</html>

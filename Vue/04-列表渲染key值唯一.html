@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>04-列表渲染key值唯一.html</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<!-- v-for -->
+	<!-- key number/string  key值唯一-->
+	<div id="app">
+		<div v-if='show'>
+			name:<input type="text" key="name">	
+		</div>
+		<div v-else>
+			password:<input type="text" key="password">	
+		</div>
+		<button @click='handleClick'>切换</button>
+	</div>
+</body> 
+<script>
+	const vm = new Vue({
+		el:"#app",
+		
+		data:{
+			show:true,
+		},
+		methods:{
+			handleClick(){
+				this.show = !this.show
+			}
+		}
+	})
+</script>
+</html>

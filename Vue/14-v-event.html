@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>14-v-event.html</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<!-- 阻止事件冒泡-->
+		<div class="a" @click="showA()">showA
+			<div class="b" @click="showB()">showB
+				<div class="c" @click="showC()">showC</div>
+				<div class="c" @click.stop="showC()">stop.showC</div>
+			</div>
+		</div>
+		<!-- 阻止默认行为 -->
+		<a href="https://www.baidu.com/" @click="showA()">showA</a>
+		<a href="https://www.baidu.com/" @click.prevent="showA()">showA prevent</a>
+
+		<!-- 只执行一次 -->
+		<button @click.once="showC()">showC once</button>
+	</div>
+</body>
+<script>
+	const vm = new Vue({
+		el:"#app",
+		data:{
+
+		},
+		methods:{
+			showA(){
+				console.log('aaa')
+			},
+			showB(){
+				console.log('bbb')
+			},
+			showC(){
+				console.log('ccc')
+			}
+		}
+	})
+</script>
+<style>
+	.a{
+		border: 1px solid #000;
+		width: 300px;
+	}
+	.b{
+		border: 1px solid #000;
+		width: 200px;
+	}
+	.c{
+		border: 1px solid #000;
+		width: 100px;
+	}
+</style>
+</html>

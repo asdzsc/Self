@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>07-计算属性和侦听器.html</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<!-- watch 侦听器 -->
+	<!-- computed  计算属性-->
+	<!-- data > methods > computed -->
+	<!-- data: -->
+	<!-- methods: 写逻辑及促发事件的时候使用 如果一个函数里面再写一个函数进行封装的时候使用-->
+	<!-- watch:当某个数据改变去做什么什么事情的时候使用-->
+	<!-- computed: 写一个新的值的时候使用 -->
+	<div id="app">
+		<!-- 姓名:{{ name }} 姓名:{{ age }} -->
+
+		<!-- {{ desc }} -->
+		<!-- {{ desc() }} -->
+		
+		<!-- {{ desc }} -->
+		<!-- {{ looks }} -->
+
+		{{ desc }}
+		{{ looks }}
+	</div>
+</body>
+<script>
+	const vm = new Vue({
+		el:'#app',
+		data:{
+			name:"shanshan",
+			age:'18',
+			looks:"very beautiful",
+			// desc:'姓名：shanshan 年龄：18'
+		},
+		methods:{
+			// desc(){
+			// 	console.log('--methods--')
+			// 	return `姓名：${this.name} 年龄：${this.age}`
+			// }
+		},
+		watch:{
+			// name(){
+			// 	console.log('--watch--')
+			// 	this.desc =  `姓名：${this.name} 年龄：${this.age}`
+			// },
+			// age(){
+			// 	console.log('--watch--')
+			// 	this.desc =  `姓名：${this.name} 年龄：${this.age}`
+			// }
+		},
+		computed:{
+			desc(){
+				console.log('--computed--')
+				return `姓名：${this.name} 年龄：${this.age}`
+			}
+		}
+	})
+</script>
+</html>

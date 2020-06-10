@@ -1,0 +1,105 @@
+ma5slider是一款简单易用的jquery响应式轮播图插件。该轮播图支持鼠标拖拽，可以通过CSS定制外观，支持无限循环模式，内置水平，垂直和淡入淡出三种轮播图过渡动画效果。
+
+使用方法
+在页面中引入jquery和jqueryui，jquery.ui.touch-punch.js文件，以及ma5slider轮播图插件的相关文件。
+
+<!-- jQuery -->
+<script src="js/jquery.min.js"></script>
+  
+<!-- jQuery UI mouse draggable widget -->
+<script src="js/jquery-ui.min.js"></script>
+  
+<!-- Touch Event Support for jQuery UI -->
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+  
+<!-- MA5 Slider -->
+<link href="css/ma5slider.min.css" rel="stylesheet" type="text/css">
+<script src="js/ma5slider.min.js"></script>
+
+
+HTML结构
+ma5slider轮播图的基本HTML结构如下
+
+
+
+<body>
+  <div class="ma5slider outside-navs outside-dots anim-horizontal loop-mode">
+      <div class="slides">
+          <a href="#slide-1"><img src="images/1.jpg" alt=""></a>
+          <a href="#slide-2"><img src="images/2.jpg" alt=""></a>
+          <a href="#slide-3"><img src="images/3.jpg" alt=""></a>
+          <a href="#slide-4"><img src="images/4.jpg" alt=""></a>
+          <a href="#slide-5"><img src="images/5.jpg" alt=""></a>
+          <a href="#slide-6"><img src="images/6.jpg" alt=""></a>
+      </div>
+  </div>
+</body>     
+
+
+初始化插件
+在页面DOM元素加载完毕之后，可以通过ma5slider()方法来初始化ma5slider轮播图插件。
+
+<script>
+    $(window).on('load', function () {
+        $('.ma5slider').ma5slider();
+    });
+</script>          
+
+
+配置参数
+你可以通过在轮播图的顶级容器上添加下面的class来自定义轮播图的外观和行为。
+
+anim-horizontal：水平滚动的轮播图。
+anim-vertical：垂直滚动的轮播图。
+anim-fade：淡入淡出的轮播图。
+autoplay：轮播图自动播放。
+loop-mode：无限循环模式。
+horizontal-navs：水平箭头导航按钮。
+vertical-navs：垂直箭头导航按钮。
+inside-navs：箭头导航按钮在轮播图内部。
+outside-navs：箭头导航按钮在轮播图外部。
+hover-navs：鼠标hover时才显示箭头导航按钮。
+hidden-navs：隐藏箭头导航按钮。
+horizontal-dots：水平圆点按钮。
+bottom-dots：底部分页导航按钮。
+inside-dots：圆点按钮在轮播图内部。
+outside-dots：圆点按钮在轮播图外部。
+hover-dots：鼠标hover时才显示圆点导航按钮。
+hidden-dots：隐藏圆点导航按钮。
+
+
+例如：
+
+<div id="example..." class="ma5slider anim-horizontal top-dots outside-navs ...">                  
+
+
+通过HTML5 data属性来控制轮播图
+data-ma5-dot：覆盖圆点导航按钮的颜色。
+data-ma5-dot-active：覆盖激活状态圆点导航按钮的颜色。
+data-ma5-nav：覆盖箭头导航按钮的颜色。
+data-ma5-anim：覆盖默认的轮播图过渡动画。
+
+
+例如：
+
+<a href="#slide-2" data-ma5-dot="#888" data-ma5-dot-active="#649100">
+  <img src="2.jpg" alt="">
+</a>         
+
+方法
+ma5slider轮播图插件可用的方法如下：
+
+// 跳转到第三幅图片
+ma5sliderGoToSlide('#slider', 3 );
+ 
+// 跳转到下一幅图片
+ma5sliderGoToNext('#slider');
+ 
+// 跳转到前一幅图片
+ma5sliderGoToPrev('#slider');
+ 
+// 跳转到第一幅图片
+ma5sliderGoToFirst('#slider');
+ 
+// 跳转到最后一幅图片
+ma5sliderGoToLast('#slider');   

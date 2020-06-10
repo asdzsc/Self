@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script>
+    function getSums() {//arguments = [1,2,3]
+        var max = arguments[0];
+        for (var i = 0; i < arguments.length; i++) {
+            if (arguments[i] > max) {
+                max = arguments[i]
+            }
+        }
+        return max
+    }
+    var result = getSums(2, 3, 4, 89, 12, 5, 10)
+    console.log(result)
+</script>
+
+<body>
+
+</body>
+
+</html>

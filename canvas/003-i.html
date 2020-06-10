@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>003-i.html</title>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#i{
+			font-size: 50px;
+			transition: 0.5s;
+		}
+		.box{
+			width: 300px;
+			height: 300px;
+			line-height: 300px;
+			border: 1px solid #000;
+			margin: 30px auto;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<i class="fa fa-play" id="i"></i>
+	</div>
+</body>
+<script src="js/jquery-1.12.3.min.js"></script>
+<script>
+$('#i').click(function(){
+   	($(this).css("transform") == "none")
+   	? $(this).css("transform","rotate(90deg)")
+   	: $(this).css("transform","none")
+}); 
+</script>
+</html>

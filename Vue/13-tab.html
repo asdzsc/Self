@@ -1,0 +1,83 @@
+<!--
+ * @Author: your name
+ * @Date: 2019-11-08 13:57:12
+ * @LastEditTime: 2019-12-20 16:14:39
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \Vue\13-tab.html
+ -->
+.
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>13-tab.html</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+	<div id="app">
+		<ul class="tab_title">
+			<li @click="current	= 0" :class="{ active:current==0 }">标题一</li>
+			<li @click="current	= 1" :class="{ active:current==1 }">标题二</li>
+			<li @click="current	= 2" :class="{ active:current==2 }">标题三</li>
+		</ul>
+		<ul class="tab_cont">
+			<li v-show="current==0 ">内容一</li>
+			<li v-show="current==1 ">内容二</li>
+			<li v-show="current==2 ">内容三</li>
+		</ul>
+
+		<!-- 动态实现 -->
+
+		<ul class="tab_title">
+			<li v-for="(value,index) in tabTitle" @click="current1=index" :class="{active:current1==index}">{{ value }}
+			</li>
+		</ul>
+		<ul class="tab_cont">
+			<li v-for="(value,index) in tabContent" v-show="current1===index">{{ value }}</li>
+		</ul>
+	</div>
+</body>
+<script>
+	const vm = new Vue({
+		el: "#app",
+		data: {
+			current: 0,
+			tabTitle: ["标题一", "标题二", "标题三"],
+			tabContent: ["内容一", "内容二", "内容三"],
+			current1: 1
+		}
+	})
+</script>
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	#app {
+		margin: 200px;
+	}
+
+	li {
+		list-style: none;
+	}
+
+	.tab_title li {
+		display: inline-block;
+		padding: 15px 20px;
+	}
+
+	.active {
+		color: #ff5400;
+		border-bottom: 1px solid #ff5400;
+	}
+
+	.tab_cont li {
+		margin: 30px;
+	}
+</style>
+
+</html>

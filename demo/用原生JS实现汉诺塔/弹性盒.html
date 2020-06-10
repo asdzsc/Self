@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            /* 应用了该样式的元素，是一个弹性盒 flex box，该元素内部的所有子元素变为弹性项目 flex item */
+            /* 所有弹性项目，在弹性盒的主轴上依次排列 */
+            /* 默认情况下，主轴方向是向右 */
+            display: flex;
+            border: 3px solid;      
+            /* 通过flex-direction可以改变主轴方向 */
+            /* flex-direction: column-reverse; */
+
+            /* 通过justify-content可以控制弹性项目在主轴上的排列方式 */
+            justify-content: space-around;
+
+            /* 通过align-items可以控制弹性项目在侧轴的排列方式 */
+            align-items: center;
+            height: 500px;
+        }
+
+        .item {
+            background: #f40;
+            border: 1px solid;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+</body>
+
+</html>

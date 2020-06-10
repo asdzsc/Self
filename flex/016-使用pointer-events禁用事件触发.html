@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>016-使用pointer-events禁用事件触发.html</title>
+</head>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	.disabled-trigger {
+		padding: 0 20px;
+		border-radius: 10px;
+		height: 40px;
+		background-color: #66f;
+		line-height: 40px;
+		color: #fff;
+		pointer-events:none;
+	}
+</style>
+<body>
+	<div class="bruce flex-ct-x">
+		<a class="disabled-trigger" href="https://www.baidu.com">点我</a>
+	</div>
+</body>
+</html>

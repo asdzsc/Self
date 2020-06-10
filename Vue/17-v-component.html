@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>17-v-component.html</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+	<div id="app">
+		<!-- 创建组件 -->
+		<my-component></my-component>
+		<hello-word></hello-word>
+		<my-word></my-word>
+		<my-address></my-address>
+		<my-tab></my-tab>
+
+		<!-- 组件的高级用法 -->
+		<table>
+			<!-- <my-tr></my-tr> -->
+			<!-- 用is指令  表示是一个组件 -->
+			<tr is="my-tr"></tr>
+		</table>
+
+		<!-- 插槽 -->
+		<!-- 设计模式中的模板语法 -->
+		<my-slot>
+			<ul slot="s1">
+				<li>111</li>
+				<li>223</li>
+			</ul>
+			<ul slot="s2">
+				<li>aaa</li>
+				<li>bbb</li>
+			</ul>
+		</my-slot>
+		<!-- 动态组件 -->
+		<button @click="flag='my-tab'">my-tab</button>
+		<button @click="flag='my-address'">my-address</button>
+		<!-- is 表示data数据中变量 -->
+		<component :is='flag'></component>	
+
+		<!-- 状态 -->
+		<button @click="flag1='my-change'">my-change</button>
+		<button @click="flag1='my-change1'">my-change1</button>
+		<!-- is 表示data数据中变量 -->
+		<!-- <component :is='flag1'></component>	 -->
+		<keep-alive>
+			<component :is='flag1'></component>
+		</keep-alive>
+	</div>
+</body>
+<script>
+	// 方式一
+	var myComponent = Vue.extend({
+		// 需要一个根节点
+		template:
+		`
+			<div>
+				<h1>你好</h1>
+				<h2>你好</h2>
+				<h3>你好</h3>
+			</div>
+		`
+	})
+	//命名规范 使用连接符  -
+	Vue.component('my-component',myComponent)
+
+
+	// 方式二
+	Vue.component('hello-word',{
+		template:
+		`
+			<div>
+				<h1>hello</h1>
+				<h2>hello</h2>
+				<h3>hello</h3>
+			</div>
+		`
+	})
+	const vm = new Vue({
+		el:"#app",
+		data:{
+			flag:'my-tab',
+			flag1:'my-change'
+		},
+		components:{
+			'my-word':{
+				template:
+				`
+					<div>
+						<h1>my word</h1>
+						<h2>my word</h2>
+						<h3>my word</h3>
+					</div>
+				`
+			},
+			'my-address':{
+				template:
+				`
+					<div>
+						<p>{{ title }}</p>
+						<ul>
+							<li v-for="(value,index) in list">{{ value }}</li>
+						</ul>
+					</div>
+				`,
+				data:function(){
+					return {
+						title:'title',
+						list:[1,2,3,4]
+					}
+				}
+			},
+			'my-tab':{
+				template:
+				`
+					<div>
+						<ul class="tab_title">
+							<li v-for="(value,index) in tabTitle" @click="current=index" :class="{active:current==index}">{{ value }}</li>
+						</ul>
+						<ul class="tab_cont">
+							<li v-for="(value,index) in tabContent" v-show="current===index">{{ value }}</li>
+						</ul>
+					</div>
+				`,
+				data:function(){
+					return{
+						tabTitle:["标题一","标题二","标题三"],
+						tabContent:["内容一","内容二","内容三"],
+						current: 1
+					}	
+				}
+			},
+			'my-tr':{
+				template:
+				`
+					<tr>
+						<td>td1</td>
+						<td>td2</td>
+					</tr>
+				`
+			},
+			'my-slot':{
+				template:
+				`
+					<div>
+						<p>my slot s1</p>
+						<slot name="s1"></slot>
+						<p>my slot s2</p>
+						<slot name="s2"></slot>
+					</div>
+				`
+			},
+			'my-change':{
+				template:
+				`
+					<h2>{{ x }}</h2>
+				`,
+				data:function(){
+					return{
+						x:Math.random()
+					}
+				}
+			},
+			'my-change1':{
+				template:
+				`
+					<h2>{{ x }}</h2>
+				`,
+				data:function(){
+					return{
+						x:Math.random()
+					}
+				}
+			},
+		}
+	})
+</script>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	li{
+		list-style: none;
+	}
+	p{
+		font-size: 32px;
+	}
+	.tab_title li{
+		display: inline-block;
+		padding: 15px 20px;
+	}
+	.active{
+		color: #ff5400;
+		border-bottom: 1px solid #ff5400;
+	}
+	.tab_cont li{
+		margin:30px;
+	}
+</style>
+</html>

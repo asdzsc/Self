@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>10-ref引用.html</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<style>
+		.square-box{
+			width: 200px;
+			height: 100px;
+			margin-top: 20px;
+			border: 2px solid #ccc;	
+		}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<square-change ref="cmp"></square-change>
+		<button @click="handclick">click</button>
+
+	</div>
+</body> 
+<!-- :data-color='color' -->
+<!-- const color = e.target.dataset.color -->
+
+
+<!-- 1. ref： dom对象的引用是该对象，组件的引用是组件的实例对象 -->
+<!-- 2. ref 同名时，后添加的会覆盖前面的，引用指向的是后面的对象 -->
+<!-- 3. 在v-for时添加引用，引用的值类型是数组，数组里面是一个一个的dom对象/组件实例对象 -->
+
+<script>
+	const vm = new Vue({
+		el:"#app",
+		data:{
+
+		},
+		methods:{
+			handclick(){
+				console.log(this.$refs.cmp.colorArr)
+			}
+		},
+		components:{
+			squareChange:{
+				data(){
+					return {
+						colorArr:['red','orange','yellow','green']
+					}
+				}
+				,
+				template:`
+					<div>
+						<button 
+							v-for="color in colorArr"
+							ref = 'btn'
+							:key = 'color'
+							:style="{ backgroundColor:color }"
+							@click="handleClick(color)"
+							:data-color = "color" 
+						>{{ color }}</button>
+						<div class="square-box" ref='squareBox'></div>
+						<div class="square-box" ref='squareBox'></div>
+					</div>
+				`,
+				methods:{
+					handleClick(color){
+						// const color = e.target.dataset.color 
+						// console.log(this.$refs)
+						const squareBox = this.$refs.squareBox
+						squareBox.style.backgroundColor = color
+						console.log(color)
+						console.log(this.$refs)
+					}
+				}
+			}
+		}
+	})
+</script>
+</html>

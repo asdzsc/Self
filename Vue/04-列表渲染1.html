@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>04-列表渲染1.html</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<!-- v-for -->
+	<!-- arr (item,index) in arr -->
+	<!-- obj (value,key,index) in obj -->
+	<!-- num in number -->
+	<div id="app">
+		<ul>
+			<li v-for='(item,index) in arr'>{{ item }} -- {{ index }}</li>
+		</ul>
+		<h4 v-for='(value,key,index) in obj'>{{ value }} ---  {{ key }}  --- {{ index }}</h4>
+		<p v-for='item in 10'> {{ item }}</p>
+		<p v-for='item in "shanshan"'> {{ item }}</p>
+	</div>
+</body> 
+<script>
+	const vm = new Vue({
+		el:"#app",
+		data:{
+			arr:['html','css','js'],
+			obj:{
+				name:"shanshan",
+				age:"18",
+				looks:"beautiful"
+			},
+		}
+	})
+</script>
+</html>

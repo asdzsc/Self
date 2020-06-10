@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery模糊匹配下拉输入框</title>
+</head>
+<style>
+	
+*{
+	padding:0;
+	margin:0;
+}
+	body{padding:20px;}
+	.input-box,.input-box2{
+		display: inline-block;
+	}
+	.wx-input{
+		width: 180px;
+		height: 30px;
+		position: relative;
+		padding-left: 2px;
+		border-radius: 3px;
+		border: 1px solid #ccc;	
+	}
+	.dataBox{
+		max-height: 300px;
+	}
+</style>
+<body>
+	<div class="input-box input-Selector">
+		<input type="text" class="wx-input">
+	</div>
+	<div class="input-box2 input-Selector">
+		<input type="text" class="wx-input">
+	</div>
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/index.js"></script>
+<script>
+	$(function(){
+		$(".input-box").select({
+			data:[
+			{"name":"刘洋","value":21},
+			{"name":"animation","value":11},
+			{"name":"available","value":13},
+			{"name":"bady","value":23},
+			{"name":"coun","value":23},
+			{"name":"张三","value":23},
+			{"name":"周琪","value":19},
+			{"name":"赵六","value":26},
+			{"name":"王五","value":22},
+			{"name":"李四","value":25},
+			{"name":"张麻子","value":25}
+		]
+		});
+		$(".input-box2").select({
+			data:[
+			{"name":"张三","value":23},
+			{"name":"周琪","value":19},
+			{"name":"赵六","value":26},
+			{"name":"王五","value":22},
+			{"name":"李四","value":25},
+			{"name":"张麻子","value":25},
+			{"name":"徐忠发","value":25}
+		]
+		});
+	})
+</script>

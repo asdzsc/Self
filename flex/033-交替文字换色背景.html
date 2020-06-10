@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>033-交替文字换色背景.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.stripe-bg{
+		  /*padding: .5em;*/
+		  line-height: 1.5em;
+		  background: rgb(241, 245, 249);
+		  background-size: auto 3em;
+		  background-origin: content-box;
+		  background-image: linear-gradient(rgba(0,0,0,.2) 50%, transparent 0);
+		}
+		.stripe-bg>p{
+		  margin: 0;
+		}
+	</style>
+</head>
+<body>
+	<div class="stripe-bg">
+		<p>hello you</p>
+		<p>hello you</p>
+		<p>hello you</p>
+		<p>hello you</p>
+		<p>hello you</p>
+	</div>
+</body>
+</html>

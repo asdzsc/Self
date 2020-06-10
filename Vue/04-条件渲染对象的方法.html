@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>04-条件渲染对象的方法.html</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<!-- v-for -->
+	<!-- 1.向对象内添加或者删除属性，不会渲染页面 -->
+	<!-- vm.$set 多用于对象的更改 -->
+	<div id="app">
+		{{ obj }}
+		<button @click='handleClick'>click</button>
+	</div>
+</body> 
+<script>
+	const vm = new Vue({
+		el:"#app",
+		data:{
+			arr:['html','css','js'],
+			obj:{
+				name:"shanshan",
+				age:"18",
+				looks:"beautiful"
+			}
+		},
+		methods:{
+			handleClick(){
+				// this.obj.name = 'duyi'
+				// this.salary = 1000
+				// delete this.obj.name
+				this.$set(this.obj,'salary',1000)
+			}
+		}
+	})
+</script>
+</html>

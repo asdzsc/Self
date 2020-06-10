@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background: #000;
+        }
+
+        .city {
+            margin: 400px auto;
+            width: 5px;
+            height: 5px;
+            background: #0fa;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        div[class^="pause"] {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            box-shadow: 0 0 5px rgb(45, 177, 109);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: pause 1s linear infinite;
+        }
+
+        .city .pause2 {
+            animation-delay: 0.3s;
+        }
+
+        .city .pause3 {
+            animation-delay: 0.6s;
+        }
+
+        @keyframes pause {
+            0% {}
+
+            70% {
+                width: 15px;
+                height: 15px;
+                opacity: 1;
+            }
+
+            100% {
+                width: 30px;
+                height: 30px;
+                opacity: 1;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="city">
+        <div class="pause1"></div>
+        <div class="pause2"></div>
+        <div class="pause3"></div>
+    </div>
+</body>
+
+</html>

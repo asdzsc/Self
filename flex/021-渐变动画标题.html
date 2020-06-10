@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>021-渐变动画标题.html</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.gradient-text {
+			background-image: linear-gradient(90deg, pink, red);
+			-webkit-background-clip: text;
+			    	background-clip: text;
+			line-height: 60px;
+			font-size: 60px;
+			-webkit-animation: hue 5s linear infinite;
+			     	animation: hue 5s linear infinite;
+			-webkit-text-fill-color: transparent;
+		}
+		@-webkit-keyframes hue {
+			from {
+				-webkit-filter: hue-rotate(0);
+			        filter: hue-rotate(0);
+			}
+			to {
+				-webkit-filter: hue-rotate(-1turn);
+			        filter: hue-rotate(-1turn);
+			}
+		}
+		@keyframes hue {
+			from {
+				-webkit-filter: hue-rotate(0);
+			        filter: hue-rotate(0);
+			}
+			to {
+				-webkit-filter: hue-rotate(-1turn);
+			        filter: hue-rotate(-1turn);
+			}
+		}
+	</style>
+</head>
+<body>
+	<h1 class="gradient-text">Full Stack Developer</h1>
+</body>
+</html>

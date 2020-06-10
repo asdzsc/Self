@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>01-创建vue实例.html</title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<body>
+	<div id="app">
+		<!-- {{ "a" }} -->
+		<!-- {{ 10 }} -->
+		<!-- {{ true }} -->
+		<!-- {{ [1,2,3,4] }} -->
+		<!-- {{ {a:1,b:10} }} -->
+		<!-- {{ undefined }} -->
+		<!-- {{ null }} -->
+		
+
+		{{ a }}
+
+	</div>
+</body>
+<script>
+	//element  元素
+	//插值表达式 {{  }}
+	// console.log('a')
+	// console.log(a)
+	// '$'
+	//vm.$nextTick 在dom执行之后执行
+	//vm.$mount
+	const vm =  new Vue({
+		el:"#app",
+		data:{
+			a:10
+		}
+	})
+	// vm.$mount('#app')
+	vm.a = 20
+	vm.a = 90
+	vm.a = 100
+	console.log(vm.a) //同步
+	console.log(vm.$el.innerHTML)//异步
+
+
+	vm.$nextTick(()=>{
+		console.log(vm.a)
+	})
+</script>
+</html>

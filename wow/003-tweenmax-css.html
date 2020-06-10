@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#obj{
+		  position:relative;
+		  left:200px;
+		  top:20px;
+		  width:50px;
+		  height:50px;
+		  background:#6fb936;
+		  border-radius:5px;
+		}	
+	</style>
+	<link rel="stylesheet" href="css/animate.css">
+</head>
+<body>
+	<div id="obj"></div>
+    <div style="position:relative;display:inline-block;"><span class="span">新意科技</span>成立于1997年12月，是一家专注于金融证券行业应用系统开发的专业软件公司。总部位于福州，目前拥有三家控股子公司：上海新意新科技有限公司、新意科创（厦门）信息科技有限公司、福州新意新网络有限公司，同时设立北京、深圳两个分公司，服务网络覆盖全国。 </div>
+    <div style="position:relative;display:inline-block;"><span class="span">新意科技</span>是中国证券一级、二级清算系统软件的重要提供商，其清算领域的系列产品起到连接中央登记结算公司与市场参与者的纽带作用。截止目前，新意科技的产品几乎涉及到券商所有中后台业务，应用范围涵盖证券公司、基金公司以及中国金融期货交易所、中央登记结算公司，实现对证券市场参与人信息、资金、证券的综合管理。 </div>
+    <div style="position:relative;display:inline-block;"><span class="span">新意科技</span>凭借一支资深专业人士组成的管理团队，多年来潜心研究证券业务和信息技术的应用及两者之间的互动关系，秉持利用信息技术推动证券行业的发展，规范业务管理的理念，致力于应用先进的管理思想开发证券业务管理系统软件，以及证券行业人工智能、大数据应用场景的创新研发，让信息技术和新的业务管理思想在产品中得以有机的融合、集成，使新意产品具有思想性、前瞻性、系统性的特点。 </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"> </script>
+<script src="https://cdn.bootcss.com/wow/1.1.2/wow.min.js"></script>
+<script>
+	
+// TweenMax.to("#obj", 3, {x:200});//在原有位置向右移动200px
+TweenMax.to("#obj", 3, {x:200, y:100});//向右移动200px的同时向下移动100px
+</script>
+</html>

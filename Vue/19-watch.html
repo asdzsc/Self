@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <img :src="url" @click="changeUrl" alt="url">
+        <img :src="url2" alt="url2">
+    </div>
+</body>
+<script>
+    const vm = new Vue({
+        el: "#app",
+        data: {
+            url: "http://file02.16sucai.com/d/file/2014/0704/e53c868ee9e8e7b28c424b56afe2066d.jpg",
+            url2: "http://img1.gtimg.com/rushidao/pics/hv1/20/108/1744/113431160.jpg"
+        },
+        methods: {
+            changeUrl() {
+                this.url = 'http://img1.gtimg.com/rushidao/pics/hv1/20/108/1744/113431160.jpg'
+            }
+        },
+        watch: {
+            url() {
+                this.url2 = 'http://file02.16sucai.com/d/file/2014/0704/e53c868ee9e8e7b28c424b56afe2066d.jpg'
+            }
+        }
+    })
+</script>
+
+</html>

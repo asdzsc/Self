@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>06-双向数据绑定.html</title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<body>
+	<!-- v-model  实现数据的双向绑定  ：value+@value  的语法糖 -->
+	<!-- input text -->
+	<!-- textarea -->
+	<!-- input checkbox-->
+	<!-- input radio-->
+	<!-- select-->
+	<div id="app">
+<!-- 
+		<input type="text" v-model="value"> 
+		<span>{{ value }}</span> -->
+	
+<!-- 		<textarea v-model="content"></textarea>
+		<p>{{ content }}</p> -->
+	
+<!-- 		<input type="checkbox" v-model="checked">
+		{{ checked }} -->
+
+<!-- 	<label for="html">html</label>
+		<input type="checkbox" value="html" id="html" v-model="checkList">
+		<label for="js">js</label>
+		<input type="checkbox" value="js" id="js" v-model="checkList">
+		<label for="vue">vue</label>
+		<input type="checkbox" value="vue" id="vue" v-model="checkList">
+		{{ checkList }} -->
+
+<!-- 	<label for="html">html</label>
+		<input type="radio"  value="html" id="html" v-model="picked">
+		<label for="js">js</label>
+		<input type="radio"  value="js" id="js" v-model="picked">
+		<label for="vue">vue</label>
+		<input type="radio"  value="vue" id="vue" v-model="picked">
+		{{ picked }} -->
+
+<!-- 		<select name="" id="" v-model='selected'>
+			<option value="" disabled>请选择</option>
+			<option value="html">html</option>
+			<option value="js">js</option>
+			<option value="vue">vue</option>
+		</select>	
+		{{ selected }} -->
+
+		<select name="" id="" v-model='selectList' multiple>
+			<option value="html">html</option>
+			<option value="js">js</option>
+			<option value="vue">vue</option>
+		</select>	
+		{{ selectList }}
+	</div> 
+</body>
+<script>
+	const vm = new Vue({
+		el:"#app",
+		data: {
+			value:"shanshan",
+			content:'',
+			checked:true,
+			checkList:[],
+			picked:'',
+			selected:'',
+			selectList:[]
+
+		}
+	})
+</script>
+</html>

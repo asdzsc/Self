@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+.page{
+    width: 500px;
+    height: 100px;
+    border: 1px solid #000;
+    margin: 200px auto;
+}
+.page a,
+.disabled {
+    display: inline-block;
+    color: aqua;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 4px;
+    width: 50px;
+    background: blanchedalmond;
+}
+.disabled{
+    color: brown;
+    background: darkslategrey;
+}
+.num{
+    color: skyblue;
+    font-size: 15px;
+
+}
+.current{
+    background: tomato;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    text-align: center;
+}

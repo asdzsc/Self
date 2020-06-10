@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>09-组件数据传递.html</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+		<!-- 父 -> 子 传值 props, 校验类型用 v-bind='Object' -->
+		<!-- 子 -> 父 传值 $emit('handle','value') -->
+	<div id="app">
+		<my-content v-bind="childrenInfo" @add='handleAdd'></my-content>	
+		父组件内的number：{{ childrenInfo.number }}
+		<button @click='handleclick'>点击</button>
+	</div>
+</body>
+<script>
+	const vm = new Vue({
+		el:"#app",
+		data:{
+			childrenInfo:{
+				title:'减肥计划',
+				content:16354351684513241088,
+				number:0,
+				obj:{a:10,b:20}
+			}
+		},
+		methods:{
+			handleAdd(num){
+				this.childrenInfo.number += num
+
+			},
+			handleclick(){
+				this.childrenInfo.title = '杉杉最美'
+			}
+
+		},
+		components:{
+			myContent:{
+				// props:['title','content'],
+				props:{
+					title:{
+						type: String,
+						default:'闪闪'
+					},
+					content:{
+						type: Number,
+						required: true,
+						validator(val){
+							return val > 10000
+						},
+					},
+					number:{
+						type: Number,
+					},
+					obj:{
+						type:Object
+					},
+				},
+				data(){
+					return {
+						// ownNumber: this.number
+					}
+				},
+				template:
+				`
+					<div>
+						<h4>{{ title }}</h4>
+						<p>{{ content }}</p>
+						<div>子组件内的number：{{ number }}</div>
+						<button @click="handleClick">add</button>
+					</div>
+				`,
+				methods:{
+					handleClick(){
+						// this.ownNumber +=10;
+						this.$emit('add',10)
+						// this.obj.a = 100;
+					}
+				}	
+			}
+		}
+	})
+</script>
+</html>
