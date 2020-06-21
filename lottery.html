@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lottery</title>
+</head>
+<body>
+<script>
+    //生成随机数
+    const randomNum = (x = 1,y = 100*100*100) => Math.floor(Math.random()*(y+1-x)+x);
+
+    const participant = [];
+    for (let i = 0; i < 100*100*10; i++) {//十万条数据
+        participant.push(randomNum())
+    }
+
+    const whiteList = [];
+    for (let i = 0; i < 100*100; i++) {//一万条数据
+        whiteList.push(randomNum())
+    }
+
+
+    function  lottery(whiteList,  participant){
+        const s = new Set(participant);
+        const result = new Set();
+
+        whiteList.forEach(item => {
+            if (s.has(item)) {
+                result.add(item);
+            }
+        });
+
+        const temp = Array.from(s);
+        // console.log(temp.length);
+        while(result.size < 20000) {
+            const r = randomNum(0,temp.length - 1);
+            result.add(temp[r])
+        }
+        console.log(result.size);
+        return Array.from(result);
+    }
+
+    console.time();
+    lottery(whiteList,participant);
+    console.timeEnd();
+</script>
+</body>
+</html>
