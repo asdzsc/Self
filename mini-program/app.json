@@ -1,0 +1,41 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/img/index",
+    "pages/mine/index", 
+    "pages/search/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Index",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath":"icon/_home.png",
+      "selectedIconPath":"icon/home.png"
+    }, {
+      "pagePath": "pages/img/index",
+      "text": "图片",
+      "iconPath":"icon/_img.png",
+      "selectedIconPath":"icon/img.png"
+    }, {
+      "pagePath": "pages/mine/index",
+      "text": "我的",
+      "iconPath":"icon/_my.png",
+      "selectedIconPath":"icon/my.png"
+    },
+    {
+      "pagePath": "pages/search/index",
+      "text": "搜索",
+      "iconPath":"icon/_search.png",
+      "selectedIconPath":"icon/search.png"
+    }
+   ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

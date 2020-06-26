@@ -4,7 +4,6 @@
     请求方法:get
     请求参数:keywords(查询关键字)
     响应内容:歌曲搜索结果
-
   2:歌曲url获取接口
     请求地址:https://autumnfish.cn/song/url
     请求方法:get
@@ -22,11 +21,6 @@
     响应内容:歌曲的热门评论
   5.mv地址获取
     请求地址:https://autumnfish.cn/mv/url
-    请求方法:get
-    请求参数:id(mvid,为0表示没有mv)
-    响应内容:mv的地址
-  6.歌词地址获取
-    请求地址:https://autumnfish.cn/lyric?id=33894312
     请求方法:get
     请求参数:id(mvid,为0表示没有mv)
     响应内容:mv的地址
@@ -50,7 +44,6 @@ var app = new Vue({
     isShow: false,
     // mv地址
     mvUrl: "",
-    lyricUrl:""
   },
   methods: {
     // 歌曲搜索
@@ -128,10 +121,6 @@ var app = new Vue({
         },
         function(err) {}
       );
-    },
-    // 歌词信息获取
-    lyric:function(musicId){
-      this.playMusic()
     },
     // 隐藏
     hide: function() {
