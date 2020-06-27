@@ -1,0 +1,117 @@
+<!--pages/demo/index.wxml-->
+<!--
+    1.text 相当于行内元素 span
+    2.view 相当于块级元素 div
+    3.checkbox 相当于 复选框标签
+ -->
+<text>1</text>
+<text>2</text>
+<view>1</view>
+<view>2</view>
+
+<!--  字符串  -->
+<view>
+    {{msg}}
+</view>
+<!--  数字类型  -->
+<view>
+    {{ num }}
+</view>
+<!--  布尔类型  -->
+<view>
+   真男人 {{ isGirl }}
+</view>
+<!--  对象类型  -->
+<view>
+  我的名字： {{person.name}}
+</view>
+<view>
+ 我的年龄：  {{person.age}}
+</view>
+<view>
+   我的薪水：{{person.salary}}
+</view>
+<!--  在标签中使用  -->
+<view data-num="{{num}}">自定义属性</view>
+<!--  使用布尔类型充当属性  
+      checked  
+      字符串与花括号之间不能存在空格 否则数据就会出错
+      <checkbox checked="   {{ checked }}">
+-->
+<view>
+  <checkbox checked="{{ checked }}"></checkbox>
+</view>
+
+
+<!-- 
+    运算 => 表达式
+    可以在花括号中 加入 表达式 -- “语句”
+    指的是一般简单 运算 数字运算 字符串 拼接 逻辑运算。。
+        1.数字的加减
+        2.字符串的拼接
+        3.三元表达式
+    语句 （复杂的代码段）
+        1.if else
+        2.switch
+        3.do while
+        4.for 。。
+-->
+<view>{{ 1+1 }}</view>
+<view>{{ "1"+"1" }}</view>
+<view>{{ 10%2 === 0 ? "true" : "false" }}</view>
+
+<!-- 
+    列表循环
+    wx:for="{{数组或者对象}}" wx:for-item "循环项的名称" wx:for-index "循环项的索引"
+    wx:key="唯一的值" ⽤来提⾼数组渲染的性能
+        wx:key 绑定一个普通的字符串的时候 那么这个字符串的名称 就是循环数组中对象的唯一值
+        wx:key="*this" ，它的意思是 item 本⾝ ，*this 代表的必须是 唯⼀的字符串和数组。
+        [1,2,3,55]
+        ["1","2","3"] 
+    当出现嵌套循环的时候     wx:for-item="item" wx:for-index="index"  不可重名
+    默认情况下 只有一层循环的时候 （wx:for-item="item" wx:for-index="index" ）可以省略
+
+    对象循环 wx:for="{{对象}}"  wx:for-item="对象的值"   wx:for-index="对象的属性"
+ 
+-->
+<view 
+    wx:for="{{list}}" 
+    wx:for-item="item" 
+    wx:for-index="index" 
+    wx:key="id">
+    索引：{{index}}-
+    值：{{item.name}}
+</view>
+
+<view wx:for="{{person}}" wx:for-item="value" wx:for-index="key" wx:key="age">
+    属性名：{{key}}-
+    属性值：{{value}}
+</view>
+
+<!-- block 标签 渲染⼀个包含多节点的结构块 block最终不会变成真正的dom元素 -->
+----
+<view>
+    <block wx:for="{{person}}" wx:for-item="value" wx:for-index="key" wx:key="age">
+        属性名：{{key}}-
+        属性值：{{value}}
+    </block>
+</view>
+
+<!-- 
+    条件渲染
+        使⽤wx:if="{{true/false}}" 来判断是否需要渲染该代码块：
+            wx:if
+            wx:elif
+            wx:else
+            wx:if的实质是移除dom
+        使⽤ hidden="{{true/false}}"来判断是否需要渲染该代码块
+            hidden的是指的控制display
+-->
+----
+    <view wx:if="{{false}}">1</view>
+    <view wx:elif="{{false}}">2</view>
+    <view wx:else>3</view>
+    ---
+    <view hidden>hidden1</view>
+    <view hidden="{{true}}">hidden2</view>
+    <view hidden="{{false}}">hidden3</view>

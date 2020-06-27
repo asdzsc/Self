@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/demo/index",
     "pages/index/index",
     "pages/img/index",
     "pages/mine/index", 
@@ -8,7 +9,7 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Index",
+    "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
