@@ -1,0 +1,14 @@
+/*定义变量*/
+view {
+  /*使用变量*/
+  background: #ff6700;
+  width: 500rpx;
+  text-align: center;
+}
+view text {
+  color: #4D926F;
+  font-size: 50rpx;
+}
+view .text {
+  color: green;
+}

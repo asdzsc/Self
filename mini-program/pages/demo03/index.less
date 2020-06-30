@@ -1,0 +1,19 @@
+/*定义变量*/
+@color: #4D926F;
+@background: #ff6700;
+
+@import "../style/reset.less";
+
+view {
+    /*使用变量*/
+    background: @background;
+    width: 500rpx;
+    text-align: center;
+    text{
+        color: @color;
+        font-size: 50rpx;
+    }
+    .text{
+        color: @themcolor;
+    }
+}

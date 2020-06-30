@@ -1,0 +1,6 @@
+
+<swiper indicator-dots="true" autoplay="true" interval="1000" circular="true">
+  <swiper-item><image src="https://aecpm.alicdn.com/simba/img/TB1CWf9KpXXXXbuXpXXSutbFXXX.jpg_q50.jpg"></image></swiper-item>
+  <swiper-item><image src="http://gw.alicdn.com/imgextra/i3/135/O1CN01iQOVwV1Crs4jhSDmY_!!135-0-lubanu.jpg"></image></swiper-item>
+  <swiper-item><image src="//img.alicdn.com/imgextra/i2/19/O1CN01MuJvk51C0k8C4zxHn_!!19-0-luban.jpg"></image></swiper-item>
+</swiper>

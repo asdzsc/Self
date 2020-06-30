@@ -1,0 +1,7 @@
+<!-- 
+icon的类型，有效值：success, success_no_circle,info, warn, waiting, cancel, download, search,clear
+size number/string 23 否 icon的⼤⼩
+color string 否 icon的颜⾊，同css的color
+
+-->
+<icon type="success" size="60" color="yellow"/>

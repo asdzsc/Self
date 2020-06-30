@@ -1,42 +1,50 @@
 {
-  "pages":[
-    "pages/demo/index",
-    "pages/index/index",
-    "pages/img/index",
-    "pages/mine/index", 
-    "pages/search/index"
-  ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
-  },
-  "tabBar": {
-    "list": [{
-      "pagePath": "pages/index/index",
-      "text": "首页",
-      "iconPath":"icon/_home.png",
-      "selectedIconPath":"icon/home.png"
-    }, {
-      "pagePath": "pages/img/index",
-      "text": "图片",
-      "iconPath":"icon/_img.png",
-      "selectedIconPath":"icon/img.png"
-    }, {
-      "pagePath": "pages/mine/index",
-      "text": "我的",
-      "iconPath":"icon/_my.png",
-      "selectedIconPath":"icon/my.png"
+    "pages": [
+        "pages/demo010/index", 
+        "pages/demo09/index",
+        "pages/demo08/index",
+        "pages/demo05/index",
+        "pages/demo04/index",
+        "pages/demo03/index",
+        "pages/demo02/index",
+        "pages/demo01/index",
+        "pages/demo/index",
+        "pages/index/index",
+        "pages/img/index",
+        "pages/mine/index",
+        "pages/search/index"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "WeChat",
+        "navigationBarTextStyle": "black"
     },
-    {
-      "pagePath": "pages/search/index",
-      "text": "搜索",
-      "iconPath":"icon/_search.png",
-      "selectedIconPath":"icon/search.png"
-    }
-   ]
-  },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+    "tabBar": {
+        "list": [{
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "icon/_home.png",
+                "selectedIconPath": "icon/home.png"
+            }, {
+                "pagePath": "pages/img/index",
+                "text": "图片",
+                "iconPath": "icon/_img.png",
+                "selectedIconPath": "icon/img.png"
+            }, {
+                "pagePath": "pages/mine/index",
+                "text": "我的",
+                "iconPath": "icon/_my.png",
+                "selectedIconPath": "icon/my.png"
+            },
+            {
+                "pagePath": "pages/search/index",
+                "text": "搜索",
+                "iconPath": "icon/_search.png",
+                "selectedIconPath": "icon/search.png"
+            }
+        ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
 }
