@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas</title>
+    <style>
+        canvas{
+        display: block;
+        margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="mycanvas"></canvas>
+    <script type="text/javascript">
+        var chess = document.getElementById("mycanvas");
+        chess.width = 500;
+        chess.height = 500;
+        var context = chess.getContext('2d');
+
+        function drawChess(params){
+        	this.init(params)
+        }
+
+        drawChess.prototype = {
+        	constructor: drawChess,
+			init:function(params){
+	        	this.context = params.context;
+	        	this.startX = params.points[0];
+	         	this.startY = params.points[1];
+	            this.endX = params.points[2];
+	            this.endY = params.points[3];
+        	},
+        	stroke:function(i,num){
+                for(var i = 0;i < num; i++){                    
+                    this.context.moveTo(this.startX  + i * num, this.startY);
+                    this.context.lineTo(this.endX + i * num, this.endY);
+                    this.context.stroke();
+                    this.context.moveTo(this.startX, this.startY + i * num);
+                    this.context.lineTo(this.endX, this.endY + i * num);
+                    this.context.stroke();
+                }
+        	},
+        }
+
+    //     var chess = new drawChess(){
+    //         for(var i = 0;i < 20; i++){
+    //             context.strokeStyle="#000";
+    //             context.moveTo(15 + i * 30, 15);
+    //             context.lineTo(15 + i * 30, 495);
+    //             context.stroke();
+    //             context.moveTo(15, 15 + i * 30);
+    //             context.lineTo(495, 15 + i * 30);
+    //             context.stroke();
+				// if (i%2) {
+    //             	context.fillStyle = "red"
+    //             }
+    //         }
+    //     }
+        // drawChess();
+
+         var chess = new drawChess({
+         	context:context,
+         	points:[0,100,500,100],
+         })
+          var chess1 = new drawChess({
+            context:context,
+            points:[100,500,100,0],
+         })
+         chess.stroke(0,30)
+         chess1.stroke(0,30)
+         // chess.fillRect(500,30,500,500)
+    </script>
+</body>
+</html>
