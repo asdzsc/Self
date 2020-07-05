@@ -1,3 +1,9 @@
+import {
+    request
+} from '../../request/index.js'
+import {
+    runtime
+} from '../../lib/runtime/runtime'
 // pages/goods_list/index.js
 Page({
 
@@ -17,14 +23,41 @@ Page({
             id: 2,
             value: "价格",
             isActive: false
-        }]
+        }],
+        goodsList: []
+    },
+    QueryParams: {
+        query: "",
+        cid: "",
+        pagenum: 1,
+        pagesize: 10
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
-        console.log(options);
+        // console.log(options);
+        this.QueryParams.cid = options.cid
+            // console.log(this.QueryParams.cid);
+        this.getGoodsList()
+    },
+    async getGoodsList() {
+        // const res = await request({
+        //     url: "/goods/search"
+        // })
+        // this.QueryParams = res
+        // console.log(res);
+        // this.setData({
+        //         QueryParams
+        //     })
+        const res = await request({
+            url: "/goods/search",
+            data: this.QueryParams
+        })
+        this.setData({
+            goodsList: res.goods
+        })
     },
     // 标题点击事件
     handleBindItemTap(e) {
@@ -42,4 +75,5 @@ Page({
             tabs
         })
     }
+
 })

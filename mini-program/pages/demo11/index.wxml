@@ -1,0 +1,8 @@
+<Tabs list="{{list}}" binditemChange="handleChange"></Tabs>
+<view>
+	<block wx:if="{{list[0].isActive}}">0</block>
+	<block wx:elif="{{list[1].isActive}}">1</block>
+	<block wx:elif="{{list[2].isActive}}">2</block>
+	<block wx:else>3</block>
+</view>
+  

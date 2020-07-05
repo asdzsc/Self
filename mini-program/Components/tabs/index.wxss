@@ -1,0 +1,13 @@
+.tab_title {
+	display: flex;
+	text-align: center;
+}
+
+.tab_item {
+	flex: 1;
+}
+
+.active {
+	color: red;
+	border-bottom: 5rpx solid #f00;
+}
