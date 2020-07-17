@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<div id="app">
+    <input type="text" v-on:keyup.enter="handleSubmit">
+    <input type="text" v-on:keyup.65="handleSubmit">
+    <input type="text" v-on:keyup="handleSubmit1($event)">
+</div>
+
+<body>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: "#app",
+        methods: {
+            handleSubmit() {
+                console.log("eee");
+            },
+            handleSubmit1(e) {
+                // console.log(e);
+                if (e.keyCode == 13) {
+                    console.log("eee");
+                }
+            }
+        }
+    })
+</script>
+
+</html>

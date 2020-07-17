@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<div id="app">
+    <!-- 只当是当前元素自身时触发处理函数 -->
+    <ul @click.self="handleUlClick">
+        <!-- 阻止事件冒泡 -->
+        <li @click="handleLiClick1($event)">111</li>
+        <li @click.stop="handleLiClick">111</li>
+        <li>222</li>
+        <li @click.once="handleLiClick">332</li>
+    </ul>
+    <!-- 阻止默认行为 -->
+    <a @click.prevent="handleChange" href="https://www.baidu.com">跳转</a>
+</div>
+
+<body>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            isActive: false
+        },
+        methods: {
+            handleLiClick() {
+                console.log("li handleLiClick");
+            },
+            handleLiClick1(ev) {
+                console.log("li handleLiClick");
+            },
+            handleUlClick() {
+                console.log("Ul handleUlClick");
+            },
+            handleChange() {
+
+            }
+        }
+    })
+</script>
+
+</html>

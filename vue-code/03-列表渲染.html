@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<div id="app">
+    <ul v-for="(item,index) in arrList">
+        <li>{{item}}---{{index}}</li>
+    </ul>
+    <ul v-for="(item,key) in objList">
+        <li>{{key}}---{{item}}</li>
+    </ul>
+</div>
+
+<body>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            arrList: [11, 22, 33],
+            objList: {
+                name: "zsc",
+                age: 18,
+                salary: 1000000
+            }
+        }
+    })
+</script>
+
+</html>

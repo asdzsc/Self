@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .yellow {
+            background: yellow;
+        }
+
+        .green {
+            background: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div style="background: yellow;">11111</div>
+        <button @click="handleClick">切换</button>
+        <div :class="isActive ? 'yellow' : 'green'">三目运算绑定class变色</div>
+        <div :class="classObj">对象的方法绑定class变色</div>
+        <div :class="classArr">数组的方法绑定class变色</div>
+
+        <div :style="'background:'+(isActive ? 'yellow' : 'green')">三目运算绑定style变色</div>
+        <div :style="styleObj">对象的方法绑定style变色</div>
+        <div :style="styleArr">数组的方法绑定style变色</div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            isActive: true,
+            classObj: {
+                yellow: false,
+                green: true
+            },
+            classArr: [
+                "yellow"
+            ],
+            styleObj: {
+                backgroundColor: "yellow"
+            },
+            styleArr: []
+        },
+        methods: {
+            handleClick() {
+                this.isActive = !this.isActive
+
+            }
+        }
+    })
+</script>
+
+</html>
