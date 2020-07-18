@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <div id="app">
+        <input type="text" v-model="val"> {{val}}
+        <textarea v-model="val"></textarea>
+        <br>
+        <input type="checkbox" v-model="isChecked" />记录用户名
+        <br> 你最喜欢的运动是什么？
+        <input type="checkbox" v-model="checkGroup" value="跑步" />跑步
+        <input type="checkbox" v-model="checkGroup" value="游泳" />游泳
+        <input type="checkbox" v-model="checkGroup" value="滑冰" />滑冰
+        <br> 你最喜欢的开发语言是什么？
+        <input type="radio" v-model="picked" value="php" />php
+        <input type="radio" v-model="picked" value="js" />js
+        <input type="radio" v-model="picked" value="java" />java <br> {{picked}}
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            val: "",
+            isChecked: false,
+            checkGroup: [],
+            picked: ""
+        }
+    })
+</script>
+
+</html>

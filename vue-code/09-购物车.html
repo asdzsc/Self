@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        全选： <input type="checkbox" v-model="isAllChange" @change="handleAllChange" />
+        <ul>
+            <li v-for="item in cartList">
+                <input type="checkbox" v-model="checkList" @change="handleChange" :value="item">{{ item }}
+                <button @click="handleDel(item)">del</button>
+                <span>{{item.num}}</span>
+                <button @click="handleAdd(item)">add</button>
+            </li>
+        </ul>
+        {{checkList}}
+        <p>总价格：{{ getSum() }}</p>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: "#app",
+
+        data: {
+            checkList: [],
+            isAllChange: false,
+            cartList: [{
+                name: "11",
+                price: 20,
+                num: 2,
+                id: 0
+            }, {
+                name: "22",
+                price: 30,
+                num: 1,
+                id: 1
+            }, {
+                name: "33",
+                price: 50,
+                num: 2,
+                id: 2
+            }]
+        },
+        methods: {
+            getSum() {
+                var sum = 0
+                for (i in this.checkList) {
+                    sum += this.checkList[i].price * this.checkList[i].num
+                }
+                return sum
+            },
+            handleAllChange() {
+                // console.log(this.isAllChange);
+                if (this.isAllChange) {
+                    this.checkList = this.cartList;
+                } else {
+                    this.checkList = [];
+                }
+            },
+            handleChange() {
+                if (this.checkList.length === this.cartList.length) {
+                    this.isAllChange = true;
+                } else {
+                    this.isAllChange = false;
+                }
+            },
+            handleDel(item) {
+                // console.log(item);
+                var num = item.num--;
+                if (num === 1) {
+                    item.num = 1
+                }
+            },
+            handleAdd(item) {
+                item.num++;
+            }
+        }
+    })
+</script>
+
+</html>

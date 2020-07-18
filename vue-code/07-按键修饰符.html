@@ -7,15 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
+
+<body>
+    <div id="app">
+        <input type="text" v-on:keyup.enter="handleSubmit">
+        <input type="text" v-on:keyup.65="handleSubmit">
+        <input type="text" v-on:keyup="handleSubmit1($event)">
+    </div>
+</body>
 <div id="app">
     <input type="text" v-on:keyup.enter="handleSubmit">
     <input type="text" v-on:keyup.65="handleSubmit">
     <input type="text" v-on:keyup="handleSubmit1($event)">
 </div>
-
-<body>
-
-</body>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script>
     var vm = new Vue({

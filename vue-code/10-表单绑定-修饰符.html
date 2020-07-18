@@ -11,12 +11,7 @@
 
 <body>
     <div id="app">
-        <ul v-for="(item,index) in arrList">
-            <li>{{item}}---{{index}}</li>
-        </ul>
-        <ul v-for="(item,key) in objList">
-            <li>{{key}}---{{item}}</li>
-        </ul>
+        v-model.lazy <input type="text" v-model.lazy="val" /> {{val}}<br> v-model.number <input type="number" v-model.number="password">{{password}}<br> v-model.trim <input type="text" v-model.trim="username" /> |{{username}}|
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -24,12 +19,9 @@
     var vm = new Vue({
         el: "#app",
         data: {
-            arrList: [11, 22, 33],
-            objList: {
-                name: "zsc",
-                age: 18,
-                salary: 1000000
-            }
+            val: "",
+            password: 0,
+            username: ""
         }
     })
 </script>

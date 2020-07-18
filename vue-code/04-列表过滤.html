@@ -7,15 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<div id="app">
-    <input type="text" @input="handleInput" v-model="val" />
-    <ul v-for="item in arrList">
-        <li>{{item}}</li>
-    </ul>
-</div>
+
 
 <body>
-
+    <div id="app">
+        <input type="text" @input="handleInput" v-model="val" />
+        <ul v-for="item in arrList">
+            <li>{{item}}</li>
+        </ul>
+    </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script>
@@ -32,9 +32,9 @@
                 //利用输入框的值  过滤包含的字段
                 //filter 过滤
                 let newList = this.List.filter(item => {
-                    return item.indexOf(this.val) > -1
-                })
-                // console.log(newList);
+                        return item.indexOf(this.val) > -1
+                    })
+                    // console.log(newList);
                 this.arrList = newList
 
             }

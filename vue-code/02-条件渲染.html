@@ -7,23 +7,23 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<div id="app">
-    <button @click="handleClick">切换</button>
-    <div v-if="isActive">切换----11111</div>
-    <div v-else>切换----22222</div>
 
-    <ul v-if="isActive">
-        <li v-for="item in cartList">{{item}}</li>
-    </ul>
-    <div v-else>cartList为空</div>
-
-    <div v-if="which === 1">which === 1</div>
-    <div v-else-if="which === 2">which === 2</div>
-    <div v-else>which === 3</div>
-</div>
 
 <body>
+    <div id="app">
+        <button @click="handleClick">切换</button>
+        <div v-if="isActive">切换----11111</div>
+        <div v-else>切换----22222</div>
 
+        <ul v-if="isActive">
+            <li v-for="item in cartList">{{item}}</li>
+        </ul>
+        <div v-else>cartList为空</div>
+
+        <div v-if="which === 1">which === 1</div>
+        <div v-else-if="which === 2">which === 2</div>
+        <div v-else>which === 3</div>
+    </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script>
