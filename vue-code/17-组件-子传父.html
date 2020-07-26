@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        父组件
+        <navbar @myevent="handleEvent($event)"></navbar>
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    Vue.component("navbar", {
+        template: `
+            <div>
+            子组件
+                <button @click="handleClick()">子组件</button>
+            </div>
+        `,
+        data() {
+            return {
+                childName: "子组件的状态"
+            }
+        },
+        methods: {
+            handleClick() {
+                this.$emit("myevent", this.childName)//$emit 分发事件
+            }
+        }
+    })
+    var vm = new Vue({
+        el: "#app",
+        methods: {
+            handleEvent(e) {
+                console.log("父组件接收成功", e);
+
+            }
+        }
+    })
+</script>
+
+</html>

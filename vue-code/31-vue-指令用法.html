@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <div v-hello="'yellow'">111111</div>
+        <div v-hello="'red'">111111</div>
+        <div v-hello="mycolor">111111</div>
+    </div>
+
+</body>
+<!-- slot 占位符 -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    Vue.directive("hello", {
+        inserted(e, bind) {
+            // 指令生命周期-创建 插入
+            console.log(e);
+            console.log(bind);
+            e.style.background = bind.value
+        },
+        update(el, bind) {
+            // 指令-生命周期-更新
+            el.style.background = bind.value
+        }
+    })
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            mycolor: "blue"
+        }
+    })
+</script>
+
+</html>

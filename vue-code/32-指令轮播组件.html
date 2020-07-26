@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Examples</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/Swiper/5.4.5/css/swiper.css">
+
+
+    <style>
+        .swiper-container {
+            width: 600px;
+            height: 300px;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="app">
+        <div class="swiper-container myswiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" v-for="(data,index) in list" v-swipe="{
+                     index:index,
+                     length:list.length
+                  }">
+                    {{data}}
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+
+        </div>
+    </div>
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/Swiper/5.4.5/js/swiper.js"></script>
+<script type="text/javascript">
+    Vue.directive("swipe", {
+        inserted(el, bind) {
+            // console.log(el);
+            // console.log(bind);
+            if (bind.value.index === bind.value.length - 1) {
+                new Swiper('.myswiper', {
+                    // direction: 'vertical'
+                    loop: true,
+                    // 如果需要分页器
+                    pagination: {
+                        el: '.swiper-pagination',
+                    }
+                })
+            }
+        }
+    })
+    new Vue({
+        el: "#app",
+        data: {
+            list: [],
+            // which:"a"
+        },
+        mounted() {
+            console.log("root-mounted")
+            setTimeout(() => {
+                this.list = ["1111", "22222", "33333", "44444"]
+            }, 2000)
+        }
+    })
+</script>
+
+</html>

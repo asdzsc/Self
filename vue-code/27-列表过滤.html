@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Examples</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="val" /> {{val}}
+        <button @click="handleAddClick">add</button>
+
+        <!-- <transition-group>不同于 transition， 它会以一个真实元素呈现：默认为一个 <span>。你也可以通过
+                tag 特性更换为其他元素。
+         -->
+        <transition-group tag="ul" name="bounce">
+            <li v-for="(data,index) in datalist" :key="data">
+                {{data}}---{{index}}
+                <button @click="handleDelClick(index)">del</button>
+            </li>
+        </transition-group>
+
+    </div>
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript">
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            datalist: [],
+            val: "111111"
+        },
+        methods: {
+            handleAddClick() {
+                this.datalist.push(this.val)
+            },
+            handleDelClick(index) {
+                console.log("delete", index);
+                //splice
+                this.datalist.splice(index, 1)
+            }
+        }
+    })
+
+            // 新老虚拟dom对比的 时候 会 使用 diff 算法。
+</script>
+<style>
+    .bounce-enter-active {
+        animation: bounce-in .5s;
+    }
+
+    .bounce-leave-active {
+        animation: bounce-in .5s reverse;
+    }
+
+    @keyframes bounce-in {
+        0% {
+            transform: translateX(100px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+    }
+</style>
+
+</html>

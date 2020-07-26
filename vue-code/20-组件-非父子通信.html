@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <author></author>
+        <user></user>
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    var bus = new Vue()//定义总事线 全局的vue实例
+
+    Vue.component("author", {
+        template: `
+            <div>
+                微信作者
+                <input type="text" ref="mytext">
+                <button @click="handleAdd">handleAdd</button>
+            </div>
+        `,
+        methods: {
+            handleAdd(data) {
+                // console.log(this.$refs.mytext.value);
+                bus.$emit("push", this.$refs.mytext.value)
+            }
+        }
+    })
+    Vue.component("user", {
+        // 合适的位置订阅
+        template: `
+            <div>
+                微信用户
+                {{val}}
+            </div>
+        `,
+        mounted() {
+            bus.$on("push", data => {
+                console.log("收到订阅推送", data);
+                this.val = data
+            })
+        },
+        data() {
+            return {
+                val: ''
+            }
+        }
+    })
+    var vm = new Vue({
+        el: "#app"
+    })
+</script>
+
+</html>

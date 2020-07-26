@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .fade-enter-active,
+    .fade-leave-active {
+        transition: opacity .5s;
+    }
+
+    .fade-enter,
+    .fade-leave-to
+
+    /* .fade-leave-active below version 2.1.8 */
+        {
+        opacity: 0;
+    }
+
+    .bounce-enter-active {
+        animation: bounce-in 1s;
+    }
+
+    .bounce-leave-active {
+        animation: bounce-in 1 s reverse;
+    }
+
+    @keyframes bounce-in {
+        0% {
+            transform: scale(0);
+        }
+
+        50% {
+            transform: scale(1.5);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+</style>
+
+<body>
+    <div id="app">
+
+
+        <button @click="isShow=!isShow">click</button>
+        <transition name="fade">
+            <p v-show="isShow">1111111111111111</p>
+        </transition>
+        <transition name="bounce">
+            <p v-show="isShow">22222222222222222</p>
+        </transition>
+
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            isShow: false
+        }
+    })
+</script>
+
+</html>

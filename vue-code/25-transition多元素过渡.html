@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .bounce-enter-active {
+        animation: bounce-in .5s;
+    }
+
+    .bounce-leave-active {
+        animation: bounce-in .5s reverse;
+    }
+
+    @keyframes bounce-in {
+        0% {
+            transform: scale(0);
+        }
+
+        50% {
+            transform: scale(1.5);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+</style>
+
+<body>
+    <div id="app">
+        <button @click="isShow=!isShow">click</button>
+        <transition name="bounce">
+            <!-- 当有相同的标签元素切换时 需要通过key特性来设置唯一标记来区分他们 否则vue为了效率只会替换  相同标签内部的内容 -->
+            <p v-if="isShow" key="11" mode="out-in">Toggle show</p>
+            <p v-else key="22">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris facilisis
+                enim libero, at
+                lacinia diam fermentum id.
+                Pellentesque habitant morbi tristique senectus et netus.</p>
+            <!-- <div v-else>222222222222</div> -->
+        </transition>
+
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            isShow: true
+        }
+    })
+</script>
+
+</html>

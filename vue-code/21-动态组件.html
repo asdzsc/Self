@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+
+        <ul>
+            <li @click="who = 'home'">首页</li>
+            <li @click="who = 'category'">分类</li>
+            <li @click="who = 'cart'">购物车</li>
+        </ul>
+        <!-- keep-alive 保留状态 避免重新渲染 -->
+        <keep-alive>
+            <!-- components 动态绑定多个组件在is属性中 -->
+            <components :is="who"></components>
+        </keep-alive>
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            who: "home"
+        },
+        components: {
+            "home": {
+                template:
+                    `
+                    <div>
+                        首页:<input type="text">
+                    </div>
+                    `
+            },
+            "category": {
+                template:
+                    `<div>分类</div>`
+            },
+            "cart": {
+                template:
+                    `<div>购物车</div>`
+            },
+        }
+    })
+</script>
+<style>
+    ul {
+        overflow: hidden;
+    }
+
+    ul li {
+        float: left;
+        list-style: none;
+        width: 200px;
+        height: 50px;
+        background: aqua;
+        line-height: 50px;
+        text-align: center;
+        margin: 0 10px
+    }
+</style>
+
+</html>

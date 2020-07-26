@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="data in datalist" :key="data.filmId">
+                <h3>{{data.name}}</h3>
+                <img :src="data.poster" />
+            </li>
+        </ul>
+        <child v-if="isCreated"></child>
+    </div>
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript">
+
+    Vue.component("child", {
+        template: `<div id="aaa">
+                 child --{{title}}
+                <button @click="title='1111111'">change1</button>
+                <button @click="title='2222222'">change2</button>
+            </div>`,
+
+        data() {
+            return {
+                title: "00000",
+                datalist: [],
+                count: 0
+            }
+        },
+
+        methods: {
+
+        },
+
+        beforeCreate() {
+            console.log("beforeCreate")
+        },
+        created() {
+            console.log("created")
+        },
+
+        beforeMount() {
+            console.log("beforeMount")
+        },
+
+        mounted() {
+
+            console.log("mounted", "访问dom,setInterval,window.onscroll, 监听事件 ajax")
+        },
+
+        beforeUpdate() {
+            console.log("beforeUpdate")
+        },
+
+        updated() {
+            console.log("updated", "更新之后可以访问dom")
+
+        },
+
+        beforeDestroy() {
+            console.log("beforeDestroy-clearInterval ,window.onscroll=null,$off");
+        },
+
+        destroyed() {
+            console.log("destroyed--clearInterval ,window.onscroll=null,$off")
+        }
+
+    })
+
+
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            isCreated: true,
+            datalist: []
+        }
+    })
+
+          // vm.$mount("#app")
+
+         //
+         //  vue组件 生命周期 ?
+         //  vue组件的 钩子函数？
+         //  vue组件的生命周期钩子函数？
+</script>
+
+</html>

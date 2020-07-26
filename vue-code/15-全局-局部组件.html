@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <div id="app">
+        <navbar></navbar>
+        <sibling></sibling>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<!-- 
+    1.自定义组件需要一个root element
+    2.父子组件中的data无法共享
+    3.子组件可以有data methods computed... data必须是一个函数并返回一个对象 
+-->
+<script>
+    Vue.component("navbar", {
+        template: `
+            <div style="background:yellow;">
+                <button @click="handleNavBarClick">我是全局navBar组件---{{navbar}}</button><br>
+                我是全局navBar组件---{{navbar}} <br>
+                <child></child>
+                <box></box>
+            </div>
+        `,
+        methods: {
+            handleNavBarClick() {
+                console.log("全局navBar组件 handleNavBarClick");
+
+            }
+        },
+        data() {
+            return {
+                navbar: "navbar"
+            }
+        },
+        components: {
+            box: {
+                template:
+                    `
+                        <div>局部组件</div>
+                    `
+            }
+        }
+    })
+    Vue.component("child", {
+        template: `
+            <button @click="handleNavBarClick">我是全局child组件</button>
+        `,
+        methods: {
+            handleNavBarClick() {
+                console.log("全局child组件 handleNavBarClick");
+
+            }
+        }
+    })
+    Vue.component("sibling", {
+        template: `
+            <div style="margin-top:20px;">
+                <button @click="handleNavBarClick">我是全局sibling组件</button><br>
+                <child></child>
+            </div>
+        `,
+        methods: {
+            handleNavBarClick() {
+                console.log("全局sibling组件 handleNavBarClick");
+
+            }
+        }
+    })
+    var vm = new Vue({
+        el: "#app"
+    })
+</script>
+
+</html>

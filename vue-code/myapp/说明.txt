@@ -1,0 +1,4 @@
+npm run lint  修复代码
+npm run build 打包代码 输出dist
+express -e backend  node模拟后端
+public 文件中放置dist内的文件 http://localhost:3000/ 后台运行

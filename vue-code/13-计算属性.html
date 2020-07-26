@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <div id="app">
+        {{name.substring(0,1).toUpperCase()+name.substring(1)}}<br>
+        {{getMethodsName()}} <br>
+        {{getName}} <br>
+        <div>
+            {{getMethodsName()}} <br>
+            {{getName}} <br>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            name: "tom"
+        },
+        methods: {
+            getMethodsName() {//无缓存 多次调用
+                console.log("getName  方法");
+                return this.name.substring(0, 1).toUpperCase() + this.name.substring(1)
+            }
+        },
+        computed: {//有缓存 性能好
+            getName() {
+                console.log("getName  computed");
+                return this.name.substring(0, 1).toUpperCase() + this.name.substring(1)
+            }
+        }
+    })
+</script>
+
+</html>

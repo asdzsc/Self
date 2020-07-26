@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- <button @click="isShow = !isShow">click</button> -->
+        <navbar>
+            <button @click="isShow = !isShow">click</button>
+        </navbar><!-- 自定义事件 -->
+        <sidebar v-show="isShow"></sidebar>
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<!--
+    混合父组件的内容与子组件自己的模板——内容分发 
+    父组件模板的内容在父组件作用域内编译   子组件模板的内容在子组件作用域内编译 -->
+<script>
+    Vue.component("navbar", {
+        template: `
+            <div>
+                navbar
+                <slot></slot>
+            </div>
+        `
+    })
+    Vue.component("sidebar", {
+        template: `
+            <div style="background:yellow;list-style:none;">
+            sidebar
+               <ul>
+                <li>1111</li>
+                <li>2222</li>
+                <li>3333</li>
+               </ul>
+            </div>
+        `
+    })
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            isShow: true
+        }
+    })
+</script>
+
+</html>

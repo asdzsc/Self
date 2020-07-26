@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- <button @click="isShow = !isShow">click</button> -->
+        <navbar @myevent="handleShow"></navbar><!-- 自定义事件 -->
+        <sidebar v-show="isShow"></sidebar>
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    Vue.component("navbar", {
+        template: `
+            <div>
+                navbar
+              <button @click="handleEvent">click</button>
+            </div>
+        `,
+        methods: {
+            handleEvent() {
+                this.$emit("myevent")//子组件分发事件
+            }
+        }
+    })
+    Vue.component("sidebar", {
+        template: `
+            <div style="background:yellow;list-style:none;">
+            sidebar
+               <ul>
+                <li>1111</li>
+                <li>2222</li>
+                <li>3333</li>
+               </ul>
+            </div>
+        `
+    })
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            isShow: true
+        },
+        methods: {
+            handleShow() {
+                this.isShow = !this.isShow
+            }
+        }
+    })
+</script>
+
+</html>
