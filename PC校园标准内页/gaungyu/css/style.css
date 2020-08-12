@@ -1,0 +1,195 @@
+/*页面总宽度*/
+#wrap{
+	width: 100%;
+	min-width: 1100px;
+	margin: 0 auto;
+}
+
+/*主体内容宽度*/
+.inner{
+	width: 1000px;
+	margin: 0 auto;
+}
+
+
+/*头部区域*/
+.header{
+	position: relative;
+}
+.top{
+	position: absolute;
+	z-index: 9;
+	top: 0;
+	width: 100%;
+}
+.top .inner{
+	height: 72px;	
+}
+.top .nav1{
+	float: right;
+	margin-top: 12px;
+}
+.top .nav1 li{
+	float: left;
+}
+.top .nav1 li a{
+	display: block;
+	padding: 0 16px;
+	height: 40px;
+	line-height: 40px;
+	font-size: 18px;
+	color: #000;
+	text-align: center;
+
+}
+.top .nav1 li a.on, .top .nav1 li a:hover{
+	background-image: url("../images/nav.png");
+	background-position: center;
+	background-size: 100% 100%;
+	color: #fff;
+}
+
+/*banner*/
+.banner img{
+	width: 100%;
+	vertical-align: bottom;
+}
+ 
+
+/*main*/
+.main{
+	margin-top: 40px;
+}
+
+/*title*/
+
+
+/*contain*/
+.container{
+	margin-top: 24px;
+}
+ 
+
+/*content*/
+.content{
+	width: 100%;
+	min-height: 200px;
+	float: left;
+	font-size: 16px;
+	text-indent: 2rem;
+	line-height: 30px;
+	text-align: justify;
+}
+h2{
+	font-size: 22px;
+	color: #3399cc;
+	text-align: center;
+	text-indent: 0;
+	margin-top: 30px;
+}
+.content .title{
+	background-image: url("../images/titlebg.png");
+	background-position: center;
+	background-size: 100% 100%;
+	text-align: center;
+	width: 200px;
+	height: 65px;
+	line-height: 65px;
+	text-indent: 0;
+	font-size:25px; 
+	color: #fff;
+	margin: 30px auto;
+}
+.line{
+	background-image: url("../images/line.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	text-align: center;
+	
+}
+.cont_title{
+	background-image: url("../images/tbg.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	color: #fff;
+	background-size: 100% 100%;	
+	margin: 30px 0;
+}
+.cont_desc{
+	background-image: url("../images/cont.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 30px;
+	box-sizing: border-box;
+	margin: 20px 0;
+	background-size: 100% 100%;
+}
+.cont_desc p{
+	text-indent: 0;
+}
+.cont_desc .text{
+	text-indent: 2rem;
+}
+.cont_desc .box{
+	margin-top: 30px;
+}
+.cont_desc .box a{
+	text-indent: 0;
+	color: red;
+}
+.post li{
+	margin-top: 30px;
+}
+.post li .div{
+	background-image: url("../images/pbg.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	color: #fff;
+	padding: 0 20px;
+	background-size: 100% 100%;
+}
+.post li .div p{
+	float: left;
+	display: block;width: 120px;
+}
+.post li .div .icon{
+	margin: 0 auto;
+	text-align: center;
+	float: left;
+	margin-left: 28%;
+}
+.post li .div .icon img{
+	vertical-align: middle;
+}
+.post li .div .slide{
+	float: right;
+	margin-right: 30px;
+}
+.post li .div .slide img{
+	vertical-align: middle;
+}
+.post li .desc{
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	border-left: 1px solid #ccc;
+	padding: 20px;
+	box-sizing: border-box;
+	display: none;
+}
+.post li .desc .apply{
+	float: right;
+}
+/*版权*/
+.copyright{ 
+	margin:60px auto 0; 
+	width:100%; 
+	height:50px; 
+	line-height:50px;
+	text-align:center;
+	color:#fff; 
+	font-size:12px;
+	background: #3399cc;
+}
+.copyright img{
+	vertical-align: text-bottom;
+}
