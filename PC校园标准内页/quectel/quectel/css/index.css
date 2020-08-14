@@ -1,0 +1,140 @@
+.content .info {
+  text-indent: 2rem;
+  text-align: justify;
+  line-height: 25px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+.content .info .div {
+  float: left;
+  width: 60%;
+}
+.content .info .div p span {
+  color: #000;
+  font-weight: bolder;
+}
+.content .info img {
+  float: right;
+  width: 35%;
+}
+.content .job .job_list {
+  text-align: center;
+  width: 130px;
+  height: 40px;
+  line-height: 40px;
+  background: #e61a19;
+  color: #fff;
+  margin: 0 auto;
+}
+.content .job .job_cont .job_up {
+  border-bottom: 1px solid #e61a19;
+  padding: 10px 0;
+}
+.content .job .job_cont .job_up p {
+  float: left;
+  font-size: 20px;
+  color: #e61a19;
+}
+.content .job .job_cont .job_up .slide {
+  float: right;
+}
+.content .job .job_cont .job_up .slide img {
+  vertical-align: middle;
+  padding-left: 10px;
+}
+.content .job .job_cont .job_desc {
+  display: none;
+}
+.content .job .job_cont .job_desc h2 {
+  margin: 15px 0;
+  font-size: 20px;
+}
+.content .job .job_cont .job_desc a {
+  float: right;
+  margin: 10px 0;
+}
+.content .process ul li {
+  width: 27%;
+  padding: 30px;
+  float: left;
+  height: 276px;
+  box-sizing: border-box;
+}
+.content .process ul li:nth-child(1) {
+  background: #e8eff5;
+  margin-left: 3.5%;
+}
+.content .process ul li:nth-child(2) {
+  background: #f7f7f6;
+  margin-left: 7%;
+}
+.content .process ul li:nth-child(3) {
+  background: #fce8e8;
+  margin-left: 6.5%;
+}
+.content .nav li {
+  float: left;
+  width: 125px;
+  margin-right: 35px;
+  color: #e61a19;
+  margin-bottom: 15px;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid #e61a19;
+}
+.content .nav li.active {
+  background: #e61a19;
+  color: #fff;
+}
+.content .nav_cont li {
+  display: none;
+}
+.content .ask .line {
+  color: #e61a19;
+  font-size: 20px;
+}
+.content .ask .line img {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.content .ask .cont_title {
+  background-image: url("../images/bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  background-size: 100% 100%;
+  margin: 30px 0;
+  padding: 5px 15px;
+  box-sizing: border-box;
+}
+.content .ask .cont_desc .name {
+  float: left;
+  width: 30px;
+}
+.content .ask .cont_desc .div {
+  margin-left: 30px;
+}
+.content .ask .cont_desc .div span {
+  color: #e61a19;
+}
+.content .contact {
+  margin-top: 20px;
+}
+.content .contact img {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.content .contact span {
+  color: #e61a19;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.content .contact p {
+  margin-left: 35px;
+}
+.content .contact p span {
+  font-weight: bolder;
+  font-size: 16px;
+  color: #000;
+}
