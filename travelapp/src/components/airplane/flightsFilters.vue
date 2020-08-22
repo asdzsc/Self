@@ -97,7 +97,7 @@ export default {
   methods: {
     // 选择机场时候触发
     handleAirport(value) {
-      // console.log(value);
+      console.log(value)
       // this.data 是缓存中的大数据 不会被更改
       const arr = this.data.flights.filter(v => {
         return v.org_airport_name === value;
@@ -107,6 +107,7 @@ export default {
 
     // 选择出发时间时候触发
     handleFlightTimes(value) {
+      console.log(value)
       // if (value.length == 3) {
       //   let form1 = Number(value.slice(0, 1));
       //   let to1 = Number(value.slice(2, 3));
@@ -131,7 +132,7 @@ export default {
 
     // 选择航空公司时候触发
     handleCompany(value) {
-      // console.log(value);
+      console.log(value);
       // this.data 是缓存中的大数据 不会被更改
       const arr = this.data.flights.filter(v => {
         return v.airline_name === value;
