@@ -83,7 +83,13 @@ export default {
     // return (from = this.data.options.flightTimes[0]);
     // let str = this.data.options.flightTimes[0].from.toString() + 0;
     // let str1 = this.data.options.flightTimes[0].to.toString() + 0;
-    // console.log(this.data.options.flightTimes[0].from);
+	// console.log(this.data.options.flightTimes[0].from);
+	// timeArr.unshift({from:'00',to:'06'})
+	let timeArr = this.data.options.flightTimes;
+	timeArr[0].from = '00'
+	timeArr[0].to = '06'
+	timeArr[1].from = '06'
+	// console.log(typeof timeArr[1].to);
   },
 
   props: {
@@ -107,27 +113,16 @@ export default {
 
     // 选择出发时间时候触发
     handleFlightTimes(value) {
-      console.log(value)
-      // if (value.length == 3) {
-      //   let form1 = Number(value.slice(0, 1));
-      //   let to1 = Number(value.slice(2, 3));
-      // } else if (value.length == 4) {
-      //   let form1 = Number(value.slice(0, 1));
-      //   console.log(form1);
-      // }
-      // let valueObj = {
-      //   from: Number(value.slice(0, 1)),
-      //   to: Number(value.slice(2, 3))
-      // };
-      // console.log(value);
-      // console.log(typeof value);
+		// value.join(':')
+		console.log( value);
+		console.log(typeof value);
       // this.data 是缓存中的大数据 不会被更改
-      // const arr = this.data.flights.filter(v => {
-      //   //开始小时数字
-      //   const start = +v.dep_time.split(":")[0];
-      //   return valueObj.from <= start && valueObj.to > start;
-      // });
-      // this.$emit("setDataList", arr);
+      const arr = this.data.flights.filter(v => {
+        //开始小时数字
+        const start = +v.dep_time.split(":")[0];
+        return value.from <= start && value.to > start;
+      });
+      this.$emit("setDataList", arr);
     },
 
     // 选择航空公司时候触发
