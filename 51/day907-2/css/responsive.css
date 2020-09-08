@@ -1,0 +1,451 @@
+@media screen and (max-width:1600px) {}
+
+@media screen and (max-width:1450px) {
+	/* .clwords {
+		top: 35%;
+	} */
+	.cldesc {
+		font-size: 30px;
+	}
+	.ac4yh {
+		width: 100px;
+	}
+	.ac4title {
+		font-size: 22px;
+	}
+}
+
+@media screen and (max-width:1350px) {
+	.inner {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width:1280px) {
+	.ac4title {
+		margin-top: 20px;
+	}
+	.ac4yh {
+		width: 80px;
+	}
+}
+
+@media screen and (max-width:1240px) {
+	.inner {
+		width: 90%;
+	}
+	.icLeft {
+		width: 40%;
+		left: 10%;
+	}
+	.icRight {
+		width: 35%;
+		right: 10%;
+	}
+	.logo {
+		margin-left: 0;
+	}
+	.container:before {
+		background-size: 100% auto;
+		background-repeat: repeat-y;
+	}
+	.milepost__list li {
+		width: 45%;
+	}
+	.eqs img {
+		width: 140px;
+	}
+	.eqs img:last-child {
+		width: 100px;
+	}
+	
+	.entertext{ left: 50%; width: 50%; box-sizing: border-box;}
+}
+
+@media screen and (max-width:1200px) {
+	.session {
+		width: 90%;
+	}
+	.indexCont {
+		width: 90%;
+	}
+	.icLeft {
+		position: relative;
+		width: 100%;
+		left: 50%;
+		margin-left: -50%;
+		transform: translateY(0);
+		margin-top: 160px;
+	}
+	.icRight {
+		position: relative;
+		width: 100%;
+		left: 50%;
+		margin-left: -50%;
+		transform: translateY(0);
+		margin-top: 60px;
+	}
+	.mains {
+		position: static;
+		padding-bottom: 20px;
+	}
+	.footer {
+		position: static;
+		margin: 50px auto 0;
+	}
+	.irbg {
+		display: none;
+		position: static;
+	}
+	.ac3map,
+	.ac3tw {
+		display: none;
+	}
+	.mmapPic {
+		display: block;
+	}
+	.ac4yh {
+		width: 50px;
+	}
+	.al4cont {
+		width: 44%;
+		padding: 0 3%;
+	}
+	.preachlist{
+		width: 90%;
+	}
+}
+
+@media screen and (max-width:1100px) {
+	.milepost__list li {
+		width: 44.6%;
+	}
+	.al2title,
+	.ac2List li:hover .al2title {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+		text-align: center;
+		font-size: 24px;
+	}
+	.al2cont,
+	.ac2List li:hover .al2cont {
+		transition: 0.45s;
+		padding: 30px 65px 0 65px;
+		background: url(../images/op2.png) repeat;
+	}
+	.al2desc,
+	.ac2List li:hover .al2desc {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@media screen and (max-width:1024px) {
+	.navs {
+		display: none;
+	}
+	.header {
+		height: 60px;
+		background: #1658a2;
+	}
+	.logo {
+		width: 200px;
+		margin-top: 5px;
+	}
+	.menubtn {
+		display: block;
+	}
+	.mtop {
+		height: 60px;
+	}
+	.videobtn span {
+		width: 60px;
+		height: 60px;
+		background-size: cover;
+	}
+	.videobtn small {
+		font-size: 24px;
+		margin-top: 18px;
+		margin-bottom: 12px;
+	}
+	.videobtn p {
+		font-size: 15px;
+	}
+	.al2desc {
+		margin-top: 15px;
+	}
+	.al2title,
+	.ac2List li:hover .al2title {
+		font-size: 20px;
+	}
+	.ac4yh {
+		display: none;
+	}
+	.cldesc {
+		font-size: 24px;
+	}
+	
+	
+	.entertext{ position: relative; left: 0; top: 0; width: 100%; box-sizing: border-box; display: none; padding: 24px 5%;}
+	.enterlist li.show .entertext{ display: block;}
+	.entertt{ padding-left: 5%;}
+	.entertext strong{ font-size: 16px; margin-bottom: 20px;}
+	.entertt{ display: flex; display: -webkit-flex;}
+	.entertt span{ white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-right: 10px; flex: 1; -webkit-flex: 1;}
+	.postfix{ padding: 30px 30px 0;}
+	.postfix strong{ font-size: 24px; margin-bottom: 20px; padding-bottom: 22px;}
+	.postfix p{ font-size: 14px;}
+	.rtlm{ display: none;}
+	.rtl .rttitle{ margin-bottom: 0;}
+	.rtlink{ top: 14px;}
+	.jltitle{ width: 100%; display: block; margin-bottom: 20px;}
+	.jsleft{ width: 100%;}
+	.jlselect{ box-sizing: border-box; float: left; width: 100%; margin-left: 0%;}
+	.jlselect1{ margin-left: 0;}
+	.jsright{ float: left; margin-top: 20px; width: 100%;}
+	.al2cont{ position: relative; padding: 30px 30px;}
+	.ac2List li{ width: 48.5%; margin-bottom: 20px;}
+	.ac2List li:nth-child(2n+2){ float: right;}
+	.al4cont{ margin-top: 40px;}
+}
+
+@media screen and (max-width:861px) {
+	.aboutCont1 {
+		padding-top: 50px;
+	}
+	.ac1list {
+		margin-top: 30px;
+		padding: 20px 0 40px 0;
+	}
+	.actitle {
+		font-size: 24px;
+	}
+	.aboutCont2,
+	.aboutCont3,
+	.aboutCont4 {
+		padding: 50px 0 60px 0;
+	}
+	.ac2List {
+		margin-top: 40px;
+	}
+	.ac2List li {
+		float: none;
+		width: 100%;
+	}
+
+	.al2cont,
+	.ac2List li:hover .al2cont {
+		position: static;
+		padding: 30px;
+	}
+	.ac2List {
+		margin-top: 20px;
+	}
+	.al2desc {
+		height: auto;
+	}
+	.al4pic {
+		float: none;
+		width: 100%;
+	}
+	.al4cont {
+		width: 100%;
+		margin-top: 30px;
+		padding: 0;
+	}
+	.ac4List li {
+		margin-bottom: 40px;
+	}
+	.cldesc {
+		font-size: 20px;
+	}
+	.ac4title {
+		margin-top: 18px;
+	}
+	.cllabel,
+	.ac4words {
+		font-size: 16px;
+	}
+	.preachWrap{
+		padding: 60px 0;
+	}
+	.coverline{
+		display: none;
+	}
+	.preachlist li{
+		margin-top: 30px;
+		width: 33.333%;
+	}
+	
+	.know-item{ margin-bottom: 40px;}
+	.know-img{ width: 100%;}
+	.knowfix{ width: 100%; padding-top: 30px;}
+	.know-item:last-child{ margin-bottom: 0;}
+	.recuitelist li{ width: 100%;}
+	.recruit{ padding: 60px 0 30px;}
+	.recuitelist li{ margin-bottom: 40px;}
+	.postinfo b{ width: 80px; height: 80px;}
+	.postinfo img{ transform: scale(0.6); -webkit-transform: scale(0.6); -moz-transform: scale(0.6);}
+}
+
+@media screen and (max-width:751px) {
+	.logo {
+		width: 180px;
+	}
+	.menubtn {
+		margin-top: 30px;
+	}
+	.ac4List li {
+		margin-bottom: 20px;
+	}
+	.al4cont {
+		margin-top: 20px;
+	}
+	.clwords{
+		position: static;
+	}
+	.clwords .cllabel{
+		margin: 20px 0 0 0;
+	}
+	.cldesc{
+		color: #333;
+	}
+	.clwords{
+		text-align: left;
+		top: 0; 
+		transform: translateY(0px);
+		-webkit-transform: translateY(0px);
+	}
+	
+	.posticon{ margin-bottom: 0;}
+	.postinfo{ text-align: center; width: 33.3333%; margin-bottom: 10px; margin-left: 0; float: left;}
+	.post{ padding: 50px 0;}
+	.post-top h4{ font-size: 24px;}
+	.postimg{ width: 100%;}
+	.postfix{ width: 100%;}
+}
+
+@media screen and (max-width:641px) {
+	.footer p {
+		font-size: 12px;
+	}
+	.videobtn span {
+		width: 50px;
+		height: 50px;
+	}
+	.videobtn small {
+		font-size: 20px;
+		margin-top: 12px;
+		margin-bottom: 8px;
+	}
+	.videoimg img {
+		width: auto;
+		height: 280px;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+	}
+	.container {
+		margin-top: -270px;
+	}
+	.ilLink {
+		width: 200px;
+		height: 48px;
+		line-height: 48px;
+		font-size: 14px;
+	}
+	.ilicon {
+		transform: scale(0.7);
+		margin-right: 10px;
+	}
+	.al1item {
+		margin-top: 20px;
+		width: auto;
+		font-size: 14px;
+	}
+	.actitle {
+		font-size: 20px;
+	}
+	.aboutCont1 {
+		padding-top: 30px;
+	}
+	.al2title {
+		font-size: 18px;
+	}
+	.al2desc {
+		font-size: 14px;
+	}
+	.aboutCont2,
+	.aboutCont3,.aboutCont4,.preachWrap {
+		padding: 40px 0 60px 0;
+	}
+	.ac4title,.cldesc {
+		margin-top: 10px;
+		font-size: 18px;
+	}
+	.ac4words {
+		font-size: 14px;
+		margin-top: 5px;
+	}
+	.insidefooter{
+		padding: 10px 5%;
+		font-size: 12px;
+	}
+	.plicon{
+		transform: scale(0.7);
+	}
+	.plTitle{
+		font-size: 18px;
+		margin-top: -13px;
+	}
+	.plTxt{
+		font-size: 14px;
+		height: 100px;
+	}
+	.preachlist li:first-child .plTitle:before,.preachlist li:first-child .plTitle:after,.preachlist li:last-child .plTitle:before{
+		display: none;
+	}
+	
+	.levalmenu li{ margin-left: 20px;}
+	.levalmenu li a{ font-size: 15px;}
+	.know{ padding: 40px 0;}
+	.know-tt{ font-size: 24px; margin-bottom: 20px;}
+	.know-title span{ font-size: 20px; line-height: 65px;}
+	.know-title i{ margin-top: 27px;}
+	.recuitetext p{ font-size: 14px; margin-bottom: 20px;}
+	.recuite-top strong{ font-size: 16px;}
+	.recuite-top strong{ margin-left: 14px;}
+	.postfix strong{ font-size: 20px;}
+	.post-top p{ font-size: 14px;}
+	.post-top{ margin-bottom: 30px;}
+	.entertt span{ font-size: 14px;}
+	.videobtn{ display: none;}
+	.aboutCont2{ padding-bottom: 20px;}
+	.al2cont, .ac2List li:hover .al2cont{ padding: 20px 5%;}
+}
+
+@media screen and (max-width:520px) {}
+
+@media screen and (max-width:481px) {
+	.icLeft {
+			margin-top: 130px;
+		}
+		.preachlist li {
+	    margin-top: 10px;
+	    width: 50%;
+	}
+	
+	.know-title span{ font-size: 16px;}
+	.know-title i{ margin-right: 12px;}
+	.jltitle{ font-size: 20px;}
+	.jobScreening{ padding: 35px 0;}
+	.recruitmentBg{ padding: 20px 0 50px 0;}
+	.rtl .rttitle{ font-size: 16px;}
+	.pageC p{ font-size: 14px;}
+}
+
+@media screen and (max-width:400px) {}
+
+@media screen and (max-width:350px) {}

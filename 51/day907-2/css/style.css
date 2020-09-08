@@ -1,0 +1,334 @@
+.box {
+    width: 100%;
+    height: auto;
+    min-width: 1440px;
+    min-height: 800px;
+}
+
+.head>div {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.title {
+    height: 80px;
+    width: 1200px;
+    margin: auto;
+}
+
+.logo {
+    float: left;
+    margin-top: 17px;
+}
+
+.nav {
+    float: right;
+    height: 100%;
+}
+
+.nav li {
+    float: left;
+    margin: 0 25px;
+    height: 100%;
+    line-height: 80px;
+}
+
+.nav a {
+    padding: 0 10px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.nav .click {
+    font-weight: bold;
+    border-top: 4px solid #ffffff;
+    box-sizing: border-box;
+    line-height: 70px;
+}
+
+.banner {
+    display: block;
+    width: 100%;
+}
+
+.copy {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    color: #ffffff;
+    background-color: #071140;
+    text-align: center;
+}
+
+.copy img {
+    transform: translateY(5px);
+    margin-right: 5px;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-image: url(../img/bg_img.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.bg1 {
+    position: absolute;
+    top: 30%;
+    left: 0;
+}
+
+.bg2 {
+    position: absolute;
+    right: 0;
+    top: 20%;
+}
+
+.content {
+    width: 1000px;
+    margin: auto;
+    transform: translateY(-240px);
+    text-align: center;
+}
+
+.txt {
+    width: 990px;
+    height: 360px;
+    padding: 60px 45px;
+    box-sizing: border-box;
+    background-image: url(../img/text_borderimg.png);
+    background-size: 100% 100%;
+    margin: auto;
+}
+
+.txt p {
+    font-size: 18px;
+    color: #ffffff;
+    text-align: left;
+    line-height: 35px;
+    padding-left: 40px;
+}
+
+.txt p i {
+    color: #00eaff;
+}
+
+.p1 {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 30px;
+    text-indent: 2em;
+    text-align: left;
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.txt2 {
+    width: 770px;
+    height: 260px;
+    margin: auto;
+    background-image: url(../img/text_borderimg1.png);
+    background-size: 100% 100%;
+    padding: 50px 0;
+    box-sizing: border-box;
+}
+
+.p2 {
+    font-size: 16px;
+    color: #ffffff;
+    text-align: center;
+    margin: 10px 0;
+    position: relative;
+}
+
+.p3>img {
+    transform: translateY(5px);
+    margin-right: 10px;
+}
+
+.p4>img {
+    transform: translateY(6px);
+    margin-right: 10px;
+}
+
+.p5>img {
+    transform: translateY(5px);
+    margin-right: 10px;
+}
+
+.p6>img {
+    transform: translateY(8px);
+    margin-right: 10px;
+}
+
+.ewm {
+    margin-top: 120px;
+    padding: 0 125px;
+}
+
+.ewm>div:first-child {
+    float: left;
+}
+
+.ewm>div:last-child {
+    float: right;
+    margin-top: 25px;
+}
+
+.ewm p {
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+    width: 210px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.ul {
+    margin-top: 40px;
+}
+
+.ul li {
+    width: 145px;
+    height: 125px;
+    float: left;
+    margin: 0 10px;
+    margin-bottom: 20px;
+}
+
+.ul img {
+    width: 100%;
+    display: block;
+    height: 100%;
+}
+
+.bg {
+    background-color: #000000;
+}
+
+.change {
+    margin-top: 100px;
+}
+
+.change p {
+    font-size: 18px;
+    color: #ffffff;
+    float: left;
+    margin-left: 40px;
+}
+
+.sel1,
+.sel2,
+.sel3 {
+    width: 205px;
+    height: 30px;
+    float: left;
+    background-image: url(../img/change_img.png);
+    background-size: 100% 100%;
+    margin-right: 25px;
+}
+
+.change>div select {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    background: url(../img/tri.png) 180px center no-repeat;
+    background-size: 12px;
+    color: #ffffff;
+    padding: 2px 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: bold;
+    appearance: none;
+}
+
+.btn {
+    float: left;
+    cursor: pointer;
+    display: block;
+    height: 30px;
+}
+
+.btn img {
+    display: block;
+    height: 100%;
+}
+
+.job {
+    margin-top: 55px;
+}
+
+.joblist {
+    position: relative;
+    text-align: left;
+    padding-bottom: 60px;
+}
+
+.joblist p {
+    color: #ffffff;
+    padding: 0 35px;
+    box-sizing: border-box;
+}
+
+.jobname {
+    font-size: 16px;
+    color: #020343;
+    width: 960px;
+    height: 82px;
+    background-image: url(../img/jobname_bg.png);
+    background-size: 100% 100%;
+    line-height: 82px;
+    padding-left: 90px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.p10 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.p11 {
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.jump {
+    display: block;
+    width: 145px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-image: url(../img/a_jump.png);
+    background-size: 100% 100%;
+    font-size: 18px;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+}
+
+.job {
+    height: 2010px;
+    overflow: hidden;
+}
+
+.button {
+    width: 145px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-image: url(../img/a_jump.png);
+    background-size: 100% 100%;
+    font-size: 18px;
+    color: #fff;
+    margin: auto;
+    transform: translateY(50px);
+    cursor: pointer;
+}
