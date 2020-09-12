@@ -1,0 +1,215 @@
+/* live页面样式表 */
+.main {
+    position: relative;
+}
+
+img.left {
+    position: absolute;
+    top: 220px;
+    left: 0;
+    width: 16%;
+}
+
+img.right {
+    position: absolute;
+    top: 280px;
+    right: 0;
+    width: 18%;
+    z-index: -1;
+}
+
+.brief {
+    width: 1200px;
+    margin: 100px auto;
+}
+
+.brief .briefMsg,
+.brief .briefPic {
+    width: 50%;
+    float: left;
+}
+
+.brief .briefMsg {
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.briefMsg .briefTitle {
+    color: #D80029;
+    font-weight: bold;
+    font-size: 29px;
+}
+
+.briefMsg>div.line {
+    width: 120px;
+    height: 2px;
+    background-color: #D80029;
+    margin: 20px 0;
+}
+
+.briefMsg .briefInfo {
+    font-size: 16px;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.msgBox {
+    margin-bottom: 10px;
+}
+
+.msgBox>div {
+    float: left;
+}
+
+.brief .livePic {
+    margin-left: -50px;
+}
+
+.msgBox>div.msgPic {
+    width: 7%;
+    text-align: center;
+    padding-top: 5px;
+    box-sizing: border-box;
+}
+
+.msgBox>div.msgPic img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.msgBox>div.msgInfo {
+    width: 93%;
+    line-height: 30px;
+}
+
+.develop {
+    padding: 100px 0;
+    margin: -50px auto 0;
+    position: relative;
+    box-sizing: border-box;
+    background: url(../images/schemeBg.png) bottom center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.develop .brief {
+    margin: 0 auto;
+}
+
+
+.develop .brief .briefPic {
+    width: 40%;
+}
+
+.develop .brief .briefPic img {
+    width: 100%;
+    margin-top: 100px;
+}
+
+.develop .brief .briefMsg {
+    width: 60%;
+}
+
+.welfare {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.welfareBox {
+    padding-top: 50px;
+}
+
+.helpBox {
+    background: url(../images/liveBg.png) bottom center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 150px 0 50px;
+}
+
+.welfareBox .welfareTitle {
+    text-align: center;
+    color: #D80029;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.welfareBox .welfareLine {
+    width: 180px;
+    height: 2px;
+    margin: 40px auto 30px;
+    background-color: #D80029;
+}
+
+.welfareBox .welfareInfo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+#certify,
+#certify .swiper-container {
+    width: 100%;
+}
+
+#certify .swiper-container .swiper-slide {
+    width: 1100px;
+    height: 500px;
+    text-align: center;
+    padding: 0 50px;
+    opacity: 0.5;
+}
+
+#certify .swiper-slide.swiper-slide-active {
+    opacity: 1;
+}
+
+#certify .swiper-pagination-bullets .swiper-pagination-bullet {
+    width: 40px;
+    height: 10px;
+    border-radius: 10px;
+    opacity: 0.5;
+    border: none;
+    outline: none;
+}
+
+#certify .swiper-pagination-bullet-active {
+    width: 40px;
+    height: 10px;
+    border-radius: 10px;
+    opacity: 1;
+    /* border: none;
+    outline: none; */
+}
+
+img.help {
+    display: block;
+    margin: 20px auto 0;
+}
+
+div.brief.plan {
+    width: 100%;
+    margin-top: -100px;
+    padding: 200px 0 100px;
+    box-sizing: border-box;
+    background: url(../images/planBg.png) top center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+div.plan .planBox {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+div.plan .briefPic img {
+    width: 100%;
+}
+
+div.plan img.planPic {
+    position: absolute;
+    width: 11%;
+    bottom: 10%;
+    left: 15%;
+}

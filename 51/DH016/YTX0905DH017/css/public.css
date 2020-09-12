@@ -1,0 +1,404 @@
+/*页面总宽度*/
+#wrap {
+    width: 100%;
+    min-width: 1280px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/*主体内容宽度*/
+.inner {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/*头部区域*/
+.header {
+    position: relative;
+}
+
+.top {
+    padding: 0 50px;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    height: 80px;
+}
+
+.top .inner {
+    height: 80px;
+}
+
+.top .logo {
+    float: left;
+    margin-top: 14px;
+    cursor: pointer;
+}
+
+.top .nav1 {
+    float: right;
+}
+
+.top .nav1 li {
+    float: left;
+}
+
+.top .nav1 li a {
+    display: block;
+    padding: 0 32px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 19px;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    transition: all .3s;
+}
+
+.top .nav1 li a.on,
+.top .nav1 li>a:hover {
+    background: #FED942;
+    color: #D70029;
+}
+
+.nav1 li {
+    position: relative;
+}
+
+.menu {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+}
+
+.menu>p {
+    height: 80px;
+    line-height: 80px;
+    margin: 1px auto;
+    text-align: center;
+    background-color: #FED942;
+    cursor: pointer;
+}
+
+.menu>p a {
+    font-size: 16px !important;
+    font-weight: bold;
+    color: #323232;
+}
+
+.menu>p.goal a {
+    color: #DA1F2B;
+}
+
+/*banner*/
+.banner img {
+    width: 100%;
+    vertical-align: bottom;
+    margin-top: 80px;
+}
+
+/*nav2*/
+.nav2 {
+    background: #777;
+}
+
+.nav2 li {
+    float: left;
+}
+
+.nav2 li a {
+    display: block;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    background: #999;
+}
+
+.nav2 li a.on,
+.nav2 li a:hover {
+    background: #888;
+}
+
+/*main*/
+.main {
+
+    /* margin-top: -80px; */
+}
+
+/*title*/
+.title {
+    margin: 55px auto;
+    height: 46px;
+    line-height: 46px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.title h1 {
+    font-size: 46px;
+    color: #E5E5E5;
+}
+
+.title p {
+    font-size: 30px;
+    color: #D80029;
+    margin-top: -46px;
+}
+
+.title p img {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 20px;
+}
+
+/*contain*/
+.container {
+    margin-top: 24px;
+}
+
+
+
+.dsn {
+    display: none;
+}
+
+.pjz {
+    text-align: center;
+}
+
+/*aside*/
+.aside {
+    width: 200px;
+    float: left;
+}
+
+.aside_nav li {
+    margin-bottom: 10px;
+}
+
+.aside_nav li a {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    background: #999;
+}
+
+.aside_nav li a.on,
+.aside_nav li a:hover {
+    background: #888;
+}
+
+/*content*/
+.content {
+    width: 100%;
+    min-height: 500px;
+    font-size: 16px;
+}
+
+.block {
+    height: 300px;
+    background: #f47937;
+    margin-bottom: 20px;
+}
+
+
+/*版权*/
+.copyright {
+    margin: 0px auto 0;
+    width: 100%;
+    /* line-height: 80px; */
+    padding: 20px 0 0;
+    color: #fff;
+    background: #333333;
+}
+
+.copyright .copyrightBox {
+    width: 1200px;
+    margin: 0 auto;
+    height: 80px;
+}
+
+.copyrightBox>div {
+    float: left;
+    width: 48%;
+    font-size: 12px;
+}
+
+.copyrightBox .contact {
+    line-height: 30px;
+}
+
+.copyrightBox .contact img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.copyrightBox .contact img.pic {
+    margin-left: 15px;
+}
+
+.copyrightBox .contact>p {
+    font-size: 12px;
+    color: #898989;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.copyrightBox .codeBox {
+    border-left: 1px solid #898989;
+    margin-top: 17px;
+}
+
+.copyrightBox .codeBox>div {
+    float: left;
+}
+
+.codeBox>.codePic {
+    width: 10%;
+    margin-left: 20px;
+}
+
+.codeBox>.codePic img {
+    width: 40px;
+}
+
+.codeBox>.scan {
+    width: 30%;
+}
+
+.codeBox>.scan p {
+    font-size: 12px;
+    color: #898989;
+    margin-bottom: 10px;
+}
+
+.codeBox>.En {
+    font-size: 12px;
+    color: #898989;
+    margin-top: 20px;
+}
+
+
+/*回到顶部*/
+#goToTop {
+    position: fixed;
+    right: 20px;
+    z-index: 9000;
+    bottom: 30px;
+}
+
+#goToTop a {
+    background: none repeat scroll 0 0 #ddd;
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+    -webkit-border-radius: 50px;
+    color: #FF9966;
+    font-size: 14px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #999;
+    -webkit-text-shadow: 0 1px 0 #999;
+}
+
+#goToTop a {
+    padding: 10px;
+    display: inline-block;
+    letter-spacing: 10px;
+    text-align: center;
+}
+
+#goToTop a:hover {
+    background: none repeat scroll 0 0 #999;
+}
+
+/*地图*/
+.map {
+    width: 100%;
+    margin: 0 auto;
+    height: 500px;
+}
+
+.map .map-div {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+/*网页分享*/
+.bdsharebuttonbox {
+    position: fixed;
+    left: 10px;
+    bottom: 15px;
+}
+
+
+/* 动画效果 */
+@keyframes tea_arrow {
+    0% {
+        transform: rotateZ(180deg);
+    }
+
+    25% {
+        transform: rotateZ(135deg);
+    }
+
+    50% {
+        transform: rotateZ(90deg);
+    }
+
+    75% {
+        transform: rotateZ(45deg);
+    }
+
+    100% {
+        transform: rotateZ(0deg);
+    }
+}
+
+@keyframes tea_arrow1 {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    25% {
+        transform: rotateZ(45deg);
+    }
+
+    50% {
+        transform: rotateZ(90deg);
+    }
+
+    75% {
+        transform: rotateZ(135deg);
+    }
+
+    100% {
+        transform: rotateZ(180deg);
+    }
+}
+
+.tea_arrowDown {
+    animation: tea_arrow 0.5s linear;
+    transform-origin: center center;
+    transform: rotateZ(0deg);
+}
+
+.tea_arrowUp {
+    animation: tea_arrow1 0.5s linear;
+    transform-origin: center center;
+    transform: rotateZ(180deg);
+}

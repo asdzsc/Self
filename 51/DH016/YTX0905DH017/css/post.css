@@ -1,0 +1,95 @@
+/* post页面样式表 */
+.main {
+    background: url(../images/postBg.jpg) bottom center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+
+
+.postBox {
+    width: 1200px;
+    margin: -100px auto 0;
+    border-radius: 10px;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px #FFF7E6;
+    background-color: #fff;
+    position: relative;
+    z-index: 10;
+}
+
+.postBox .typeBox {
+    width: 800px;
+    margin: 0 auto 50px;
+}
+
+.postBox .typeBox>div {
+    width: 50%;
+    float: left;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.typeBox>div p {
+    width: 240px;
+    padding: 20px 0;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.typeBox>div p.target,
+.typeBox>div p:hover {
+    color: #D70029;
+    border-bottom: 2px solid #D70029;
+}
+
+.postVessel>div {
+    float: left;
+    width: 45%;
+    height: 80px;
+    line-height: 78px;
+    padding: 0 0 0 20px;
+    margin: 20px 2.5%;
+    box-sizing: border-box;
+    border: 1px solid #000;
+}
+
+.postItem {
+    position: relative;
+}
+
+.postItem>p {
+    float: left;
+    width: 70%;
+    cursor: pointer;
+}
+
+.postItem>div {
+    float: left;
+    width: 30%;
+    text-align: center;
+    line-height: 78px;
+}
+
+.postItem>a.link {
+    display: inline-block;
+    text-align: center;
+    height: 78px;
+    width: 30%;
+    background-color: #323232;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+}
+
+.postItem:hover a {
+    display: inline-block;
+}
+
+.postItem:hover div {
+    display: none;
+}
