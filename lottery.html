@@ -10,12 +10,14 @@
     const randomNum = (x = 1,y = 100*100*100) => Math.floor(Math.random()*(y+1-x)+x);
 
     const participant = [];
-    for (let i = 0; i < 100*100*10; i++) {//十万条数据
+    //十万条数据
+    for (let i = 0; i < 100*100*10; i++) {
         participant.push(randomNum())
     }
 
     const whiteList = [];
-    for (let i = 0; i < 100*100; i++) {//一万条数据
+   //一万条数据
+    for (let i = 0; i < 100*100; i++) { 
         whiteList.push(randomNum())
     }
 
