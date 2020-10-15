@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root">
+    </div>
+</body>
+<script src="node_modules/react/umd/react.development.js"></script>
+<script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+<script src="node_modules/babel-standalone/babel.min.js"></script>
+<script type="text/babel">
+    /*
+        react 事件处理  react绑定事件使用的是小驼峰命名法 在绑定函数的时候不能加()--会立即执行
+            1.修改this指向
+            1.bind方式绑定
+            2.函数通过箭头函数进行创建
+            3.constructor 提前绑定
+            4.把事件的调用写出箭头函数的调用方式
+    */
+
+    class Component extends React.Component {
+
+        constructor(props) {
+            super(props)
+            this.funC = this.funC.bind(this)
+        }
+        funA() {
+            console.log(this);
+        }
+        funB = () => {
+            console.log(this);
+        }
+        funC() {
+            console.log(this);
+        }
+        funD() {
+            console.log(this);
+        }
+
+        funE(i, e) {
+            console.log(i);
+            console.log(e);
+        }
+        render() {
+            return (
+                <div>
+                    <p>组件事件绑定</p>
+                    <button onClick={this.funA}>bind方式绑定</button>{/*this  undefined*/}
+                    <button onClick={this.funA.bind(this)}>bind方式绑定</button>{/*组件自身*/}
+                    <button onClick={this.funB}>箭头函数绑定</button>
+                    <button onClick={this.funC}>constructor提前绑定</button>
+                    <button onClick={() => { this.funD() }}>箭头函数调用事件</button>
+                    <p>组件事件传参</p>
+                    <button onClick={this.funE.bind(this, "参数1")}>bind方式绑定传参</button>
+                    <button onClick={(e) => { this.funE('参数2', e) }}>箭头函数调用事件</button>
+                </div>
+            )
+        }
+    }
+
+    ReactDOM.render(<Component />, document.getElementById("root"))
+</script>
+
+</html>

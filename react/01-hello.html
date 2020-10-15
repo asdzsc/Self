@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div id="root">
+
+    </div>
+</body>
+<script src="node_modules/react/umd/react.development.js"></script>
+<script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+<script src="node_modules/babel-standalone/babel.min.js"></script>
+<script type="text/babel">
+    // jsx = javascript xml javascript 的扩展语法
+    // 优点：
+    // 1.执行效率更快
+    // 2.它是类型安全的，编译的过程中就能及时的发现错误
+    // 3.在使用jsx的时候编写模板会更加简单和快速    
+
+    // 注意：jsx语法必须按照w3c规范来编写 标签要闭合
+    let myDom = <h1>hello word</h1>
+    ReactDOM.render(myDom, document.getElementById('root'));
+</script>
+
+</html>

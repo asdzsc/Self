@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root">
+
+    </div>
+</body>
+<script src="node_modules/react/umd/react.development.js"></script>
+<script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+<script src="node_modules/babel-standalone/babel.min.js"></script>
+<script type="text/babel">
+    let arr = [
+        <p>类别1</p>,
+        <p>类别2</p>,
+        <p>类别3</p>,
+        <p>类别4</p>,
+        <p>类别5</p>,
+    ]
+    let myDom = <div>
+        {arr}
+    </div>
+    ReactDOM.render(myDom, document.getElementById("root"))
+</script>
+
+</html>

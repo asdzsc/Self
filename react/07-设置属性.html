@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            color: aqua;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">
+
+    </div>
+</body>
+<script src="node_modules/react/umd/react.development.js"></script>
+<script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+<script src="node_modules/babel-standalone/babel.min.js"></script>
+<script type="text/babel">
+    let name = "去百度"
+    let linkUrl = "https://www.baidu.com/"
+    let color = {
+        color: "red",
+        backgroundColor: "pink"
+    }
+
+    let myDom = <div>
+        <a href={linkUrl}>{name}</a>
+        {/*行内样式设置*/}
+        <p style={color}>文字</p>
+        {/*class 设置样式  因为class是js关键字 所以要用className设置style*/}
+        <p className='box'>文字</p>
+    </div>
+
+    ReactDOM.render(myDom, document.getElementById("root"))
+</script>
+
+</html>

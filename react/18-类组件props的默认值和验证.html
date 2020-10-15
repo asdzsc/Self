@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+<script src="node_modules/react/umd/react.development.js"></script>
+<script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+<script src="node_modules/babel-standalone/babel.min.js"></script>
+<script src="node_modules/prop-types/prop-types.js"></script>
+<script type="text/babel">
+    /*
+    1.类组件props的验证和默认值 
+    // 默认值 需要defaultProps
+  
+    */
+    class MyDom extends React.Component {
+        // static defaultProps = {
+        //     name: "我是第二种设置默认值"
+        // }
+        render() {
+            return (
+                <div>
+                    <p>姓名：{this.props.name}</p>
+                    <p>年龄：{this.props.age}</p>
+                    <p>性别：{this.props.sex}</p>
+                </div>
+            )
+        }
+    }
+    MyDom.defaultProps = {
+        name: "我是小明",
+        age: 20,
+        sex: "男"
+    }
+    let obj = {
+        age: 20,
+        sex: "男"
+    }
+
+
+
+
+    //props 验证----  验证传递过来的数据是否符合我们期望的类型或要求  线上模式要取消props
+    // 1.引用prop-type库   npm install --save prop-types
+
+    MyDom.propTypes = {
+        name: PropTypes.string.isRequired,//验证name这个props传递进来的数据必须是string类型
+        age: PropTypes.number,//验证name这个props传递进来的数据必须是number类型
+    }
+
+    ReactDOM.render(<MyDom {...obj} />, document.getElementById("root"))
+
+</script>
+
+</html>

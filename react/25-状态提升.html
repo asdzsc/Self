@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root">
+    </div>
+</body>
+<script src="node_modules/react/umd/react.development.js"></script>
+<script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+<script src="node_modules/babel-standalone/babel.min.js"></script>
+<script type="text/babel">
+    /*
+        react 状态提升 多个组件需要反映相同的数据变化数据，提升到他们最近的一个父组件中
+        多个子组件需要利用到对方状态的情况下 那么这个时候就需要用到状态提升
+    */
+
+    class ComA extends React.Component {
+        render() {
+            return (
+                <div>
+                    <h1>组件a：{this.props.text}</h1>
+                </div>
+            )
+        }
+    }
+    class ComB extends React.Component {
+        render() {
+            return (
+                <div>
+                    <h1>组件b：{this.props.text}</h1>
+                </div>
+            )
+        }
+    }
+
+    class Component extends React.Component {
+
+        constructor(props) {
+            super(props)
+            this.state = {
+                context: "组件共享数据"
+            }
+
+        }
+        fun() {
+            this.setState({
+                context: "数据更改"
+            })
+        }
+
+        render() {
+            return (
+                <div>
+                    <button onClick={this.fun.bind(this)}>改变数据</button>
+                    <ComA text={this.state.context} />
+                    <ComB text={this.state.context} />
+                </div>
+            )
+        }
+    }
+
+    ReactDOM.render(<Component />, document.getElementById("root"))
+</script>
+
+</html>

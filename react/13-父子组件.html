@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+<script src="node_modules/react/umd/react.development.js"></script>
+<script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+<script src="node_modules/babel-standalone/babel.min.js"></script>
+<script type="text/babel">
+    // 父子组件
+    function MyDomA() {
+        return (
+            <h1>我是一个无状态组件1</h1>
+        )
+    }
+    function MyDomB() {
+        return (
+            <h1>我是一个无状态组件2</h1>
+        )
+    }
+    function MyDomC() {
+        return (
+            <h1>我是一个无状态组件3</h1>
+        )
+    }
+    function MyDomD() {
+        return (
+            <h1>我是一个无状态组件4</h1>
+        )
+    }
+    // 父组件调用
+    let component = (
+        <div>
+            <MyDomA />
+            <MyDomB />
+            <MyDomC />
+            <MyDomD />
+        </div>
+    )
+
+    ReactDOM.render(component, document.getElementById("root"))
+
+</script>
+
+</html>

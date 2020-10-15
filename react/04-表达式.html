@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root">
+
+    </div>
+</body>
+<script src="node_modules/react/umd/react.development.js"></script>
+<script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+<script src="node_modules/babel-standalone/babel.min.js"></script>
+<script type="text/babel">
+    // 1.使用表达式｛表达式｝
+    let text = "你好";
+    let num = 22345;
+
+    function fun(obj) {
+        // return "姓名是" + obj.name + "--------" + "年龄是" + obj.age
+        return `姓名是${obj.name}-------年龄是${obj.age}`
+    }
+    let obj = {
+        name: "小明",
+        age: 18
+    }
+
+    let myDom = (<div>
+        <div>{text}</div>
+        <div>{num}</div>
+        {/*2.计算*/}
+        <div>{num + 1}</div>
+        <div>{++num}</div>
+        {/*3.函数的使用*/}
+        <div>{fun(obj)}</div>
+    </div>)
+    ReactDOM.render(myDom, document.getElementById("root"))
+</script>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root">
+    </div>
+</body>
+<script src="node_modules/react/umd/react.development.js"></script>
+<script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+<script src="node_modules/babel-standalone/babel.min.js"></script>
+<script type="text/babel">
+    class MyDom extends React.Component {
+        constructor(props) {
+            super(props)
+            this.state = {
+                name: "嘻嘻"
+            }
+        }
+        fun = () => {
+            // console.log("aaa");
+            this.setState({
+                name: "哈哈"
+            }, () => {
+                console.log(this.state.name);
+            })
+            console.log(this.state.name);
+        }
+        render() {
+            return (
+                <div>
+                    <button onClick={this.fun}>变化</button>
+                    <p>{this.state.name}</p>
+                </div>
+            )
+        }
+    }
+    ReactDOM.render(<MyDom />, document.getElementById("root"))
+</script>
+
+</html>

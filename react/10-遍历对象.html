@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+<script src="node_modules/react/umd/react.development.js"></script>
+<script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+<script src="node_modules/babel-standalone/babel.min.js"></script>
+<script type="text/babel">
+    var obj = {
+        name: "小明",
+        age: 18,
+        sex: "男"
+    }
+
+    console.log(Object.keys(obj));
+    console.log(Object.values(obj));
+
+    let myDom = (Object.keys(obj).map((v, i) => {
+        return <p key={i}>对象的属性是：{v}---属性值：{obj[v]}</p>
+    }))
+
+    ReactDOM.render(myDom, document.getElementById("root"))
+
+</script>
+
+</html>

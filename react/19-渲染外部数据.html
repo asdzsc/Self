@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+<script src="node_modules/react/umd/react.development.js"></script>
+<script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+<script src="node_modules/babel-standalone/babel.min.js"></script>
+<script type="text/babel">
+    let tag = true;
+    //子组件
+    function MyDomA(props) {
+        return (
+            <div style={{ display: tag ? "block" : "none" }}>
+                {
+                    props.arr.map((v, i) => {
+                        return (
+                            <p key={i}>{v}</p>
+                        )
+                    })
+                }
+            </div>
+        )
+    }
+    let data = ["吃饭", "睡觉", "打豆豆"]
+
+    //父组件调用
+    let Component = () => {
+        return (
+            <div>
+                <h1 onClick={() => {
+                    tag = !tag;
+                    render()
+                }}>每日任务</h1>
+                <MyDomA arr={data} />
+            </div>
+        )
+    }
+    render()
+    function render() {
+        ReactDOM.render(<Component />, document.getElementById("root"))
+
+    }
+</script>
+
+</html>

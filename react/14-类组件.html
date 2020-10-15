@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+<script src="node_modules/react/umd/react.development.js"></script>
+<script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+<script src="node_modules/babel-standalone/babel.min.js"></script>
+<script type="text/babel">
+    // 类组件的创建方式 组件名首字母大写
+    class MyDom extends React.Component {
+        render() {
+            return (
+                <div> 我是一个类组件</div >
+            )
+        }
+    }
+
+    // 组件就是一个自定义标签
+    // 调用组件
+    let component = <MyDom />
+
+
+    ReactDOM.render(component, document.getElementById("root"))
+
+</script>
+
+</html>

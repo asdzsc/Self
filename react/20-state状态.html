@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root">
+    </div>
+</body>
+<script src="node_modules/react/umd/react.development.js"></script>
+<script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+<script src="node_modules/babel-standalone/babel.min.js"></script>
+<script type="text/babel">
+    /*
+    state 状态
+    state 与props区别
+    props是组件对外的接口 state是组件对内的接口
+    组件内可以引用其他组件 组件之间的引用就形成了树状的接口 
+    如果下层组件需要使用上层组件的数据 上层组件就可以通过下层组件中的props来进行数据的传递
+    因此 props是组件对外的接口
+
+    组件除了使用上层组件传递的数据之外  他自身也可能有需要管理数据 这个对内数据的属性 就是state
+    
+    
+    主要区别：
+        1.state是可变的
+        2.props对于当前页面的组件来说 是只读的  如果我们要改变props中的数据 那么我们修改传递给当前组件数据的父组件中的内容
+
+    react中我们只需要关心的是数据  当数据改变的时候页面自动更新
+    状态等同于页面中的数据  状态/数据改变了---页面中对应的数据绑定内容会被react自动进行改变
+
+    react 是声明式渲染 --- 一切的数据改变操作都不要我们关心 只需要我们的声明好数据 react就会自动的把对应的数据改变
+
+        如果要使用状态  那么就不能使用无状态组件
+    */
+
+    class MyDom extends React.Component {
+        /*
+            在es6中不管子类写不写constructor 在new实例的时候都会补上constructor
+            可以不写constructor 如果写了就必须调用super方法 指向父类的构造函数
+        */
+        constructor(props) {
+            // 如果在constructor 使用props  super中也要写上props
+            super(props)
+
+            // 定义state
+            this.state = {
+                name: "嘻嘻"
+            }
+        }
+        render() {
+            // this.setState({key:vale})  属于异步  react 会自动触发render进行数据渲染
+            return (
+                <div>
+                    <button onClick={() => {
+                        this.setState({ name: "哈哈" })
+                    }}>变化</button>
+                    <p>{this.state.name}</p>
+                </div>
+            )
+        }
+    }
+    ReactDOM.render(<MyDom />, document.getElementById("root"))
+</script>
+
+</html>

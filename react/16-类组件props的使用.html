@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+<script src="node_modules/react/umd/react.development.js"></script>
+<script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+<script src="node_modules/babel-standalone/babel.min.js"></script>
+<script type="text/babel">
+    /*
+    props 是react中一个重要的属性，是组件对外的接口 props可以从组件的外部向内部进行数据的传递
+    也可以完成父组件向子组件进行数据传递
+    注意：无论无状态组件还是类组件 我们都无法改变自身的props
+    */
+    class MyDom extends React.Component {
+        render() {
+            return (
+                <div>
+                    <p>姓名：{this.props.name}</p>
+                    <p>年龄：{this.props.age}</p>
+                    <p>性别：{this.props.sex}</p>
+                </div>
+            )
+        }
+    }
+    let obj = {
+        name: "小明",
+        age: 18,
+        sex: "男"
+    }
+
+    ReactDOM.render(<MyDom {...obj} />, document.getElementById("root"))
+
+</script>
+
+</html>

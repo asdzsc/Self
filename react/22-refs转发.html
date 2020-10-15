@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root">
+
+    </div>
+</body>
+<script src="node_modules/react/umd/react.development.js"></script>
+<script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+<script src="node_modules/babel-standalone/babel.min.js"></script>
+<script type="text/babel">
+    /*
+        转发refs  react当中提供了一个ref数据（不能在无状态组件当中来进行使用 因为无状态组件没有实例）
+        表示当前组件的真正实例的引用 他会返回绑定当前属性的元素
+
+        标识组件内部的元素----方便我们查找
+
+        react提供了三种方式进行ref的使用
+        1.字符串的方式
+        2.回调函数（推荐）
+        就是在dom节点上或组件上挂载函数 函数的形参 是dom节点  它的效果和字符串的方式是一样的获取值的引用
+        3.React createRef(react 16.3版本新增的方式)
+        把值赋给一个变量  通过ref挂载节点上或者组件上  使用ref的current属性拿到这个节点
+    */
+
+    class MyDom extends React.Component {
+        constructor(props) {
+            super(props)
+            this.myRef = React.createRef()
+        }
+        fun = () => {
+            // console.log(this.refs.Input.value);
+            // console.log(this.textInput.value);
+            console.log(this.myRef.current.value);
+        }
+        render() {
+            return (
+                <div>
+                    {/*
+                        1.字符串的方式
+                    <button onClick={this.fun}>获取</button>
+                    <input ref="Input" type="text" placeholder="请输入" />
+                    */}
+                    {/*
+                        2.回调函数（推荐）
+                    <button onClick={this.fun}>获取</button>
+                    <input ref={(input) => { this.textInput = input }} type="text" placeholder="请输入" />
+                    */}
+                    <button onClick={this.fun}>获取</button>
+                    <input ref={this.myRef} type="text" placeholder="请输入" />
+                </div>
+            )
+        }
+    }
+    ReactDOM.render(<MyDom />, document.getElementById("root"))
+</script>
+
+</html>
