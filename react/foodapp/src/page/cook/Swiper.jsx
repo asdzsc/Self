@@ -19,7 +19,18 @@ export default class Swiper extends React.Component {
             <img src={Swiper2}  />
             <img src={Swiper3}  />
             </Carousel>
-
+            {/* <Carousel className="my-carousel"
+              vertical
+              dots={false}
+              dragging={false}
+              swiping={false}
+              autoplay
+              infinite
+            >
+              <div className="v-item"> <img src={Swiper1}  /></div>
+              <div className="v-item"> <img src={Swiper2}  /></div>
+              <div className="v-item"> <img src={Swiper3}  /></div>
+            </Carousel> */}
           </SwiperWrap>
       );
     }

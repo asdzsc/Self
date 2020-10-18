@@ -13,3 +13,23 @@ export const SwiperWrap = styled.div `
         width:100%;
     }
 `
+export const HotCateWrap = styled.div `
+    header{
+        line-height:2.5rem;
+        background:#fff;
+        padding-left:.5rem;
+        border-bottom:1px solid #ccc;
+    }
+        .item{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img{
+                width:55%;
+            }
+            span{
+                margin-top:5px;
+            }
+        }
+
+`
