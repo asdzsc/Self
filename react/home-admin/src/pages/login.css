@@ -1,0 +1,30 @@
+body,
+html,
+#root {
+    background: #2e99fc;
+}
+
+.login.ant-card {
+    background: #2e99fc !important;
+    border: none !important;
+    height: 100%;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.loginh1 {
+    text-align: center;
+}
+
+.login .ant-card-body {
+    position: relative !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    padding: 20px;
+    width: 471px;
+    color: #000;
+    background: #fff;
+    font-size: 19px !important;
+    border-radius: 8px;
+}
