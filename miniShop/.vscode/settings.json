@@ -4,6 +4,6 @@
     },
     "files.associations": {
         "*.wxss": "css",
-        "*.wxml": "wxml"
+        "*.wxml": "html"
     }
 }
