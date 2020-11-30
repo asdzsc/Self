@@ -1,0 +1,261 @@
+* {
+    font-family: "方正兰亭黑简体";
+    text-decoration: none;
+    color: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.ic {
+    display: block;
+    margin: 30px auto;
+}
+
+.tc {
+    text-align: center;
+}
+
+.banner {
+    width: 100%;
+    min-width: 1050px;
+}
+
+.banner>img {
+    float: left;
+    width: 100%;
+}
+
+.topnav {
+    position: relative;
+    width: 100%;
+    min-width: 1050px;
+    height: 70px;
+    box-shadow: 0 7px 10px 0px rgba(191, 2, 11, 0.10);
+    z-index: 2;
+}
+
+.mbox {
+    width: 1050px;
+    height: inherit;
+    margin: 0 auto;
+}
+
+.mbox>ul {
+    text-align: center;
+}
+
+.mbox>ul>li {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 70px;
+    text-align: center;
+    margin: 0 30px;
+    color: #656565;
+    position: relative;
+}
+
+.active a {
+    color: #bc1416;
+    font-weight: bold;
+}
+
+
+.ilist {
+    width: 100%;
+    margin-top: 40px;
+    background-color: white;
+    /* box-shadow: 0 0 5px 1px rgba(191, 2, 11, 0.27); */
+    line-height: 35px;
+    font-size: 18px;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.ilist li {
+    display: inline-block;
+    padding: 0 1.5em;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.ilist li:hover {
+    color: #fff;
+    background-color: #c53436;
+}
+
+.check {
+    color: #fff;
+    background-color: #c53436;
+}
+
+
+
+.content {
+    width: 100%;
+    min-width: 1050px;
+    height: auto;
+    padding: 1px 0 0;
+    background: url(../img/bg.png) no-repeat bottom center /100%;
+}
+
+.title {
+    margin: 70px auto 50px;
+    display: block;
+}
+
+.mt {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+    margin-top: 70px;
+}
+
+.mt>img {
+    float: left;
+    margin-right: 7px;
+}
+
+.info {
+    width: 1050px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0px 0 450px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.tbox {
+    font-size: 16px;
+    text-indent: 2em;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.tbox p {
+    margin-bottom: .5em;
+}
+
+.tbox>p>span {
+    color: #bc1416;
+    font-weight: bold;
+}
+
+
+.wlist {
+    margin: 30px 0;
+    margin-left: 25px;
+}
+
+.wlist li {
+    margin-bottom: 20px;
+}
+
+.wlist span {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #bc1416;
+}
+
+.wlist span img {
+    position: relative;
+    top: 3px;
+    margin-right: 8px;
+}
+
+.wlist p {
+    text-indent: 2em;
+}
+
+.vi {
+    width: 800px;
+    display: block;
+    margin: 30px auto;
+}
+
+/* rec */
+.xt {
+    display: block;
+    margin: 0 auto;
+}
+
+.tb {
+    width: 960px;
+    margin: 0 auto;
+    font-size: 17px;
+}
+
+.tb tr {
+    line-height: 40px;
+    /* white-space: nowrap; */
+}
+
+.tb tr:nth-of-type(odd) {
+    background-color: #e2f1ff;
+}
+
+.tb tr:nth-of-type(even) {
+    background-color: #d5ebff;
+}
+
+
+.tb td:first-of-type {
+    width: 25%;
+    box-sizing: border-box;
+    padding-left: 50px;
+}
+
+.tb td:nth-of-type(2) {
+    width: 15%;
+}
+
+.tb td:nth-of-type(3) {
+    width: 40%;
+    padding-right: 1em;
+}
+
+.tb td:nth-of-type(4) {
+    width: 15%;
+}
+
+
+
+
+
+
+
+.copy {
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    background-color: #004070;
+    color: #fff;
+}
+
+.copy::before {
+    content: '';
+    display: inline-block;
+    background: url(../img/hand.png) no-repeat;
+    width: 15px;
+    height: 20px;
+    position: relative;
+    top: 4px;
+}
