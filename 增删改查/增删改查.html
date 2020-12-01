@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+</head>
+<style type="text/css">
+	tr{
+		border: 1px solid;
+		display: "";
+	}
+	th{
+		border: 1px solid;
+		width: 111px;
+	}
+	td{
+		border: 1px solid;
+		text-align: center;
+	}
+	table{
+		border: 1px solid;
+	}
+	.tianjia{
+		width: 260px;
+		height: 300px;
+		border: 1px solid;
+	}
+	p{
+		margin-left: 10px;
+		margin-top: 25px;
+	}
+	.x1{
+		margin-left: 30px;
+	}
+	.x3{
+		margin-left: 30px;
+	}
+	.qud{
+		margin-left: 55px;
+	}
+	.xiu{
+		margin-left: 55px;
+	}
+	.tianjia{
+		position: absolute;
+		margin-left: 300px;
+		z-index: 1;
+		background-color: #eee;
+		display: none;
+	}
+	.zzc{
+		position: absolute;
+		width: 1000px;
+		height: 800px;
+		background-color: #111;
+		opacity: 0.4;
+		display: none;
+
+	}
+	.xiugai{
+		width: 260px;
+		height: 300px;
+		border: 1px solid;
+		position: absolute;
+		margin-left: 300px;
+		z-index: 1;
+		background-color: #eee;
+		display: none;
+	}
+</style>
+<body>
+<div class="zzc"></div>
+	姓名：<input type="text" name="" value="请输入">
+	性别：<input type="text" name="" value="请输入">
+	电话：<input type="text" name="" value="请输入">
+	<button class="chaxun">查询</button>
+	<button class = "tianjia1">添加</button>
+	<button class="sanchu">删除</button>
+	<table>
+		<thead>
+			<tr class="tt1">
+				<th>
+					<input type="checkbox" class="quax1">
+					<span>全选</span>
+				</th>
+				<th>
+					<span>姓名</span>
+				</th>
+				<th>
+					<span>性别</span>
+				</th>
+				<th>
+					<span>年龄</span>
+				</th>
+				<th>
+					<te>联系电话</span>
+				</th>
+				<th>
+					<span>个人简介</span>
+				</th>
+				<th>
+					<span>操作</span>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="trr">
+				<td>
+					<input type="checkbox" class="quax">
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<button class="xiugai1">修改</button>
+					<button class="sanchu1">删除</button>
+				</td>
+			</tr>
+			<tr class="trr">
+				<td>
+					<input type="checkbox" class="quax">
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<button class="xiugai1">修改</button>
+					<button class="sanchu1">删除</button>
+				</td>
+			</tr>
+			<tr class="trr">
+				<td>
+					<input type="checkbox" class="quax">
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<button class="xiugai1">修改</button>
+					<button class="sanchu1">删除</button>
+				</td>
+			</tr>
+			<tr class="trr">
+				<td>
+					<input type="checkbox" class="quax">
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<button class="xiugai1">修改</button>
+					<button class="sanchu1">删除</button>
+				</td>
+			</tr>
+			<tr class="trr">
+				<td>
+					<input type="checkbox" class="quax">
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<button class="xiugai1">修改</button>
+					<button class="sanchu1">删除</button>
+				</td>
+			</tr>
+			<tr class="trr">
+				<td>
+					<input type="checkbox" class="quax">
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+				<span></span>
+				</td>
+				<td>
+					<button class="xiugai1">修改</button>
+					<button class="sanchu1">删除</button>
+				</td>
+			</tr>
+			<tr class="trr">
+				<td>
+					<input type="checkbox" class="quax">
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<button class="xiugai1">修改</button>
+					<button class="sanchu1">删除</button>
+				</td>
+			</tr>
+			<tr class="trr">
+				<td>
+					<input type="checkbox" class="quax">
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<button class="xiugai1">修改</button>
+					<button class="sanchu1">删除</button>
+				</td>
+			</tr>
+			<tr class="trr">
+				<td>
+					<input type="checkbox" class="quax">
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<button class="xiugai1">修改</button>
+					<button class="sanchu1">删除</button>
+				</td>
+			</tr>
+			<tr class="trr">
+				<td>
+					<input type="checkbox" class="quax">
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<span></span>
+				</td>
+				<td>
+					<button class="xiugai1">修改</button>
+					<button class="sanchu1">删除</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="tianjia">
+		<p>姓名<input type="text" class="x1"></p>
+		<p>性别<input type="text" class="x1"></p>
+		<p>年龄<input type="text" class="x1"></p>
+		<p>联系电话<input type="text" class="x2"></p>
+		<p>个人简历<input type="text" class="x2"></p>
+		<button class="qud">确定</button>
+		<button class="qud">取消</button>
+	</div>
+	<div class="xiugai">
+		<p>姓名<input type="text" class="x3 xig"></p>
+		<p>性别<input type="text" class="x3 xig"></p>
+		<p>年龄<input type="text" class="x3 xig"></p>
+		<p>联系电话<input type="text" class="x4 xig"></p>
+		<p>个人简历<input type="text" class="x4 xig"></p>
+		<button class="xiu">确定</button>
+		<button class="xiu">取消</button>
+	</div>
+	
+</body>
+<script type="text/javascript" src="Backstage.js"></script>
+<script type="text/javascript" src="增删改查.js"></script>
+</html>
