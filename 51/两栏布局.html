@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .clearfix:after{
+            content: '';
+            display: block;
+            clear: both;
+            height: 0;
+            visibility: hidden;
+            display: flex;
+            box-sizing: border-box;
+        }
+        .aside{
+            float: left;
+            width: 200px;
+            height: 400px;
+            background-color: red;
+            /* 注意：如果主要内容不定宽时，想实现侧边栏和主要区域之间有间隔，需要在侧边栏盒子设置margin值， */
+            margin-right: 50px;
+        }
+        .main{
+
+            /* 主要内容不定宽(常规流盒子触发BFC,会避开浮动流) */
+            overflow: hidden;
+
+            /* 主要内容定宽 */
+            /* float: right;
+            width: 400px; */
+
+            height: 400px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container clearfix">
+        <div class="aside"></div>
+        <div class="main"></div>
+    </div>
+</body>
+</html>
