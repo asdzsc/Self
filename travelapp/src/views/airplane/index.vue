@@ -45,16 +45,18 @@
     <div class="air-sale">
       <el-row type="flex" class="air-sale-pic" justify="space-between">
         <el-col :span="6" v-for="(item, index) in sales" :key="index">
-         <router-link
-            :to="`/flights?departCity=${item.departCity}&departCode=${item.departCode}&destCity=${item.destCity}&destCode=${item.destCode}&departDate=${item.departDate}`"
+          <router-link
+            :to="
+              `/flights?departCity=${item.departCity}&departCode=${item.departCode}&destCity=${item.destCity}&destCode=${item.destCode}&departDate=${item.departDate}`
+            "
           >
-		  <!-- <viewer> -->
+            <!-- <viewer> -->
             <img
               src="http://n1-q.mafengwo.net/s7/M00/2E/D4/wKgB6lSgx0KAAtuCAAVoSPI1DUk40.jpeg?imageMogr2%2Fthumbnail%2F%21750x563r%2Fgravity%2FCenter%2Fcrop%2F%21750x563%2Fquality%2F90"
             />
-			<!-- </viewer> -->
+            <!-- </viewer> -->
             <el-row class="layer-bar" type="flex" justify="space-between">
-              <span>{{item.departCity}}-{{item.destCity}}</span>
+              <span>{{ item.departCity }}-{{ item.destCity }}</span>
               <span>￥699</span>
             </el-row>
           </router-link>
@@ -71,25 +73,25 @@ import axios from "axios";
 
 export default {
   components: {
-    SearchFrom
+    SearchFrom,
   },
   data() {
     return {
-      sales: []
+      sales: [],
     };
   },
   mounted() {
     // 页面挂载完毕就要进行数据的和获取
     // 然后渲染特价机票列表
     axios({
-      url: "http://157.122.54.189:9095/airs/sale"
-    }).then(res => {
+      url: "http://157.122.54.189:9095/airs/sale",
+    }).then((res) => {
       const { data } = res.data;
       // console.log(data);
       // 将这个数据渲染到页面
       this.sales = data;
     });
-  }
+  },
 };
 </script>
 
