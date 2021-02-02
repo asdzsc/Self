@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+//store持久化，刷新后不消失
 import createPersistedState from 'vuex-persistedstate'
 
 Vue.use(Vuex)
