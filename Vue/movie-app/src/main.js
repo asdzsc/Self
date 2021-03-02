@@ -15,13 +15,13 @@ import Loading from "@/components/Loading";
 Vue.component('Loading', Loading)
 
 Vue.filter('setWH', (url, arg) => {
-  return url.replace(/w\.h/, arg)
+    return url.replace(/w\.h/, arg)
 })
 
 Vue.config.productionTip = false
 
 new Vue({
-  router,
-  store,
-  render: h => h(App)
+    router,
+    store,
+    render: h => h(App)
 }).$mount('#app')

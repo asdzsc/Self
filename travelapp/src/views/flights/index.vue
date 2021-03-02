@@ -109,7 +109,6 @@ export default {
       );
     }
   },
-
   mounted() {
     //   获取url参数
     // console.log(this.$route.query);
