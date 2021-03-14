@@ -29,3 +29,4 @@ class Snack {
         this.element.insertAdjacentHTML
     }
 }
+export default Snack
